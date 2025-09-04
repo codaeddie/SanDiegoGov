@@ -1,0 +1,107 @@
+appointment_id,appointer_id,appointee_entity_id,appointment_type,confirmation_required,term_length,authority_source,description,last_verified
+app-001,mayor-001,city-board-001,appoints_members,Yes,4_years,San Diego Municipal Code,Mayor appoints 7 members to Planning Commission with City Council confirmation,2025-01-01
+app-002,mayor-001,city-board-002,appoints_members,Yes,4_years,San Diego Municipal Code Chapter II Article 6 Division 4,Mayor appoints 7 members to Ethics Commission from nominees with City Council confirmation,2025-01-01
+app-003,mayor-001,city-board-003,appoints_members,Yes,3_years,San Diego Municipal Code,Mayor appoints 5 members to Civil Service Commission with City Council approval,2025-01-01
+app-004,mayor-001,city-board-004,appoints_members,Yes,4_years,San Diego Municipal Code Chapter IX Article 8,Mayor appoints 7 members to Housing Commission Board with City Council confirmation,2025-01-01
+app-005,mayor-001,city-board-005,appoints_members,Yes,4_years,San Diego Municipal Code Section 111.0206,Mayor appoints 7 members to Historical Resources Board with City Council confirmation,2025-01-01
+app-006,mayor-001,city-board-006,appoints_members,Yes,4_years,San Diego Municipal Code Section 26.30,Mayor appoints 11 members to Parks and Recreation Board with City Council confirmation,2025-01-01
+app-007,mayor-001,city-board-007,appoints_members,Yes,3_years,San Diego Municipal Code,Mayor appoints 8 members to Board of Library Commissioners with City Council confirmation,2025-01-01
+app-008,council-001,city-board-008,appoints_members,No,4_years,City Charter Section 41.2 - Measure B,City Council appoints 25 members to Commission on Police Practices after application process,2025-01-01
+app-009,mayor-001,city-board-009,appoints_members,Yes,3_years,San Diego Municipal Code,Mayor appoints 7 members to Commission for Arts and Culture with City Council confirmation,2025-01-01
+app-010,mayor-001,city-board-010,appoints_members,Yes,3_years,San Diego Municipal Code,Mayor appoints 7 members to Accessibility Advisory Board with City Council confirmation,2025-01-01
+app-011,mayor-001,city-board-011,appoints_members,Yes,3_years,San Diego Municipal Code,Mayor appoints 7 members to Airports Advisory Committee with City Council confirmation,2025-01-01
+app-012,mayor-001,city-board-012,appoints_members,Yes,3_years,San Diego Municipal Code,Mayor appoints 5 members to Audit Committee with City Council confirmation,2025-01-01
+app-013,mayor-001,city-board-013,appoints_members,Yes,3_years,San Diego Municipal Code,Mayor appoints 9 members to Balboa Park Committee with City Council confirmation,2025-01-01
+app-014,mayor-001,city-board-014,appoints_members,Yes,3_years,San Diego Municipal Code,Mayor appoints 7 members to Board of Building Appeals and Advisors with City Council confirmation,2025-01-01
+app-015,mayor-001,city-board-015,appoints_members,Yes,3_years,San Diego Municipal Code,Mayor appoints 9 members to Citizens Equal Opportunity Commission with City Council confirmation,2025-01-01
+app-016,mayor-001,city-board-016,appoints_members,Yes,4_years,San Diego Municipal Code,Mayor appoints 11 members to Climate Advisory Board with City Council confirmation,2025-01-01
+app-017,supervisor-001,county-board-001,appoints_members,No,4_years,County Planning Regulations,Board of Supervisors appoints 6 members to Planning Commission by district,2025-01-01
+app-018,supervisor-001,county-board-002,appoints_members,No,3_years,County Ordinance,Board of Supervisors appoints 11 members to Citizens Law Enforcement Review Board,2025-01-01
+app-019,supervisor-001,county-board-003,appoints_members,No,3_years,Board Resolution May 19 2020,Board of Supervisors appoints 31 members to Human Relations Commission,2025-01-01
+app-020,supervisor-001,county-board-004,appoints_members,No,3_years,CSBG Act Requirements,Board of Supervisors confirms 15 members to Community Action Board,2025-01-01
+app-021,supervisor-001,county-board-005,appoints_members,No,3_years,State Mental Health Requirements,Board of Supervisors appoints 20 members to Behavioral Health Advisory Board,2025-01-01
+app-022,supervisor-001,county-board-006,appoints_members,No,4_years,Proposition 10 Implementation,Board of Supervisors appoints 5 members to First 5 Commission,2025-01-01
+app-023,supervisor-001,county-board-007,appoints_members,No,3_years,State Property Tax Law,Board of Supervisors appoints 7 members to Property Tax Assessment Appeals Board,2025-01-01
+app-024,mayor-001,city-dept-001,appoints_department_head,No,At_pleasure,San Diego City Charter,Mayor appoints City Auditor as independent office,2025-01-01
+app-025,mayor-001,city-dept-002,appoints_department_head,No,At_pleasure,San Diego City Charter,Mayor appoints City Clerk,2025-01-01
+app-026,mayor-001,city-dept-003,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints City Planning Director with Council confirmation,2025-01-01
+app-027,mayor-001,city-dept-004,appoints_department_head,No,At_pleasure,San Diego City Charter,Mayor appoints City Treasurer,2025-01-01
+app-028,mayor-001,city-dept-008,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Development Services Director with Council confirmation,2025-01-01
+app-029,mayor-001,city-dept-010,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Economic Development Director with Council confirmation,2025-01-01
+app-030,mayor-001,city-dept-016,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Engineering & Capital Projects Director with Council confirmation,2025-01-01
+app-031,mayor-001,city-dept-019,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Environmental Services Director with Council confirmation,2025-01-01
+app-032,mayor-001,city-dept-020,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Finance Director with Council confirmation,2025-01-01
+app-033,mayor-001,city-dept-022,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Fire-Rescue Chief with Council confirmation,2025-01-01
+app-034,mayor-001,city-dept-024,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints General Services Director with Council confirmation,2025-01-01
+app-035,mayor-001,city-dept-029,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Human Resources Director with Council confirmation,2025-01-01
+app-036,mayor-001,city-dept-032,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Information Technology Director with Council confirmation,2025-01-01
+app-037,mayor-001,city-dept-033,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Library Director with Council confirmation,2025-01-01
+app-038,mayor-001,city-dept-035,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Parks & Recreation Director with Council confirmation,2025-01-01
+app-039,mayor-001,city-dept-037,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Personnel Director with Council confirmation,2025-01-01
+app-040,mayor-001,city-dept-038,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Police Chief with Council confirmation,2025-01-01
+app-041,mayor-001,city-dept-039,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Public Utilities Director with Council confirmation,2025-01-01
+app-042,mayor-001,city-dept-041,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Purchasing & Contracts Director with Council confirmation,2025-01-01
+app-043,mayor-001,city-dept-043,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Risk Management Director with Council confirmation,2025-01-01
+app-044,mayor-001,city-dept-046,appoints_department_head,Yes,At_pleasure,San Diego City Charter,Mayor appoints Transportation Director with Council confirmation,2025-01-01
+app-045,supervisor-001,county-dept-007,appoints_department_head,No,At_pleasure,County Charter,Board of Supervisors appoints Chief Administrative Officer,2025-01-01
+app-046,supervisor-001,county-dept-001,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Agriculture Weights and Measures Director,2025-01-01
+app-047,supervisor-001,county-dept-002,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Aging & Independence Services Director,2025-01-01
+app-048,supervisor-001,county-dept-003,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Animal Services Director,2025-01-01
+app-049,supervisor-001,county-dept-004,appoints_department_head,No,At_pleasure,County Charter,Board of Supervisors appoints Assessor/Recorder/County Clerk,2025-01-01
+app-050,supervisor-001,county-dept-005,appoints_department_head,No,At_pleasure,County Charter,Board of Supervisors appoints Auditor and Controller,2025-01-01
+app-051,supervisor-001,county-dept-006,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Behavioral Health Services Director,2025-01-01
+app-052,supervisor-001,county-dept-008,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Child and Family Well-Being Director,2025-01-01
+app-053,supervisor-001,county-dept-014,appoints_department_head,No,At_pleasure,County Charter,Board of Supervisors appoints County Counsel,2025-01-01
+app-054,supervisor-001,county-dept-018,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Environmental Health and Quality Director,2025-01-01
+app-055,supervisor-001,county-dept-023,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints County Fire Chief,2025-01-01
+app-056,supervisor-001,county-dept-026,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Health & Human Services Agency Director,2025-01-01
+app-057,supervisor-001,county-dept-027,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Housing and Community Development Director,2025-01-01
+app-058,supervisor-001,county-dept-031,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Library Director,2025-01-01
+app-059,supervisor-001,county-dept-032,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Medical Care Services Director,2025-01-01
+app-060,supervisor-001,county-dept-033,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Medical Examiner,2025-01-01
+app-061,supervisor-001,county-dept-034,appoints_department_head,No,At_pleasure,County Code,Board of Supervisors appoints Parks and Recreation Director,2025-01-01
+app-062,supervisor-001,county-dept-036,appoints_department_head,No,At_pleasure,California Penal Code,Board of Supervisors appoints Probation Chief,2025-01-01
+app-063,supervisor-001,county-dept-042,appoints_department_head,No,At_pleasure,California Elections Code,Board of Supervisors appoints Registrar of Voters,2025-01-01
+app-064,supervisor-001,county-dept-046,appoints_department_head,No,At_pleasure,County Charter,Board of Supervisors appoints Treasurer-Tax Collector,2025-01-01
+app-065,mayor-001,sandag-001,appoints_board_representative,No,At_pleasure,Regional Authority Governance,City of San Diego appoints 2 representatives to SANDAG Board,2025-01-01
+app-066,supervisor-001,sandag-001,appoints_board_representative,No,At_pleasure,Regional Authority Governance,County of San Diego appoints 2 representatives to SANDAG Board,2025-01-01
+app-067,mayor-001,mts-001,appoints_board_representative,No,At_pleasure,Regional Authority Governance,City of San Diego appoints 4 representatives to MTS Board,2025-01-01
+app-068,supervisor-001,mts-001,appoints_board_representative,No,At_pleasure,Regional Authority Governance,County of San Diego appoints 1 representative to MTS Board,2025-01-01
+app-069,mayor-001,airport-001,appoints_board_representative,Yes,3_years,California Assembly Bill 93,Mayor of San Diego appoints representatives to Airport Authority Board with Council confirmation,2025-01-01
+app-070,supervisor-001,airport-001,appoints_board_representative,No,3_years,California Assembly Bill 93,County supervisors appoint representatives to Airport Authority Board,2025-01-01
+app-071,mayor-001,port-001,appoints_board_representative,No,4_years,California Senate Bill 41,City of San Diego appoints 3 commissioners to Port District Board,2025-01-01
+app-072,mayor-001,water-001,appoints_board_representative,Yes,4_years,California State Legislature,City of San Diego appoints Water Authority representatives with Council confirmation,2025-01-01
+app-073,sandag-001,sandag-002,appoints_committee_members,No,2_years,Regional Authority Governance,SANDAG Board appoints 6 members to Executive Committee,2025-01-01
+app-074,sandag-001,sandag-003,appoints_committee_members,No,2_years,Regional Authority Governance,SANDAG Board appoints members to Transportation Committee,2025-01-01
+app-075,sandag-001,sandag-004,appoints_committee_members,No,2_years,Regional Authority Governance,SANDAG Board appoints members to Regional Planning Committee,2025-01-01
+app-076,sandag-001,sandag-005,appoints_committee_members,No,2_years,Regional Authority Governance,SANDAG Board appoints members to Audit Committee,2025-01-01
+app-077,sandag-001,sandag-006,appoints_committee_members,No,2_years,Regional Authority Governance,SANDAG Board appoints members to Borders Committee,2025-01-01
+app-078,sandag-001,sandag-007,appoints_committee_members,No,2_years,Regional Authority Governance,SANDAG Board appoints members to Public Safety Committee,2025-01-01
+app-079,mts-001,mts-002,appoints_committee_members,No,1_year,Regional Authority Governance,MTS Board appoints members to Joint Audit Oversight Budget Development and Executive Committee,2025-01-01
+app-080,mts-001,mts-003,appoints_committee_members,No,2_years,Regional Authority Governance,MTS Board appoints community members to Accessible Services Advisory Committee,2025-01-01
+app-081,mts-001,mts-004,appoints_committee_members,No,1_year,Regional Authority Governance,MTS Board appoints members to Public Security Committee,2025-01-01
+app-082,mts-001,mts-005,appoints_committee_members,No,2_years,Regional Authority Governance,MTS Board appoints industry and public representatives to Taxicab Advisory Committee,2025-01-01
+app-083,airport-001,airport-002,appoints_committee_members,No,1_year,Regional Authority Governance,Airport Authority Board appoints members to Planning Committee,2025-01-01
+app-084,airport-001,airport-003,appoints_committee_members,No,1_year,Regional Authority Governance,Airport Authority Board appoints 3 members to Executive Committee,2025-01-01
+app-085,airport-001,airport-004,appoints_committee_members,No,1_year,Regional Authority Governance,Airport Authority Board appoints members to Oversight Committee,2025-01-01
+app-086,airport-001,airport-005,appoints_committee_members,No,2_years,Regional Authority Governance,Airport Authority Board appoints community members to Art Advisory Committee,2025-01-01
+app-087,port-001,port-002,appoints_committee_members,No,2_years,Regional Authority Governance,Port Board appoints community members to Environmental Advisory Committee,2025-01-01
+app-088,water-001,water-002,appoints_committee_members,No,1_year,Regional Authority Governance,Water Authority Board appoints members to Administrative and Finance Committee,2025-01-01
+app-089,water-001,water-003,appoints_committee_members,No,1_year,Regional Authority Governance,Water Authority Board appoints members to Engineering and Operations Committee,2025-01-01
+app-090,water-001,water-004,appoints_committee_members,No,1_year,Regional Authority Governance,Water Authority Board appoints members to Imported Water Committee,2025-01-01
+app-091,water-001,water-005,appoints_committee_members,No,1_year,Regional Authority Governance,Water Authority Board appoints members to Legislation & Public Outreach Committee,2025-01-01
+app-092,water-001,water-006,appoints_committee_members,No,1_year,Regional Authority Governance,Water Authority Board appoints members to Water Planning and Environmental Committee,2025-01-01
+app-093,council-001,city-dept-030,appoints_department_head,No,At_pleasure,San Diego City Charter,City Council appoints Independent Budget Analyst,2025-01-01
+app-094,council-001,sandag-001,confirms_appointments,No,At_pleasure,Regional Authority Governance,Other member cities appoint one representative each to SANDAG Board,2025-01-01
+app-095,council-001,mts-001,confirms_appointments,No,At_pleasure,Regional Authority Governance,Other member cities appoint representatives to MTS Board,2025-01-01
+app-096,council-001,port-001,confirms_appointments,No,4_years,California Senate Bill 41,Chula Vista appoints 1 commissioner to Port District Board,2025-01-01
+app-097,council-001,port-001,confirms_appointments,No,4_years,California Senate Bill 41,Coronado appoints 1 commissioner to Port District Board,2025-01-01
+app-098,council-001,port-001,confirms_appointments,No,4_years,California Senate Bill 41,Imperial Beach appoints 1 commissioner to Port District Board,2025-01-01
+app-099,council-001,port-001,confirms_appointments,No,4_years,California Senate Bill 41,National City appoints 1 commissioner to Port District Board,2025-01-01
+app-100,council-001,nctd-001,confirms_appointments,No,At_pleasure,Regional Authority Governance,North County cities appoint representatives to NCTD Board,2025-01-01
+app-101,supervisor-001,nctd-001,appoints_board_representative,No,At_pleasure,Regional Authority Governance,5th District County Supervisor serves on NCTD Board,2025-01-01
+app-102,council-001,lafco-001,appoints_board_representative,No,4_years,Regional Authority Governance,Cities appoint representatives to San Diego LAFCO Commission,2025-01-01
+app-103,supervisor-001,lafco-001,appoints_board_representative,No,4_years,Regional Authority Governance,County supervisors appoint representatives to San Diego LAFCO Commission,2025-01-01
+app-104,council-001,lafco-001,appoints_board_representative,No,4_years,Regional Authority Governance,Special districts appoint representatives to San Diego LAFCO Commission,2025-01-01
+app-105,council-001,lafco-001,appoints_board_representative,No,4_years,Regional Authority Governance,Public members appointed to San Diego LAFCO Commission,2025-01-01
+app-106,lafco-001,lafco-002,appoints_committee_members,No,2_years,Regional Authority Governance,San Diego LAFCO Commission appoints special district representatives to Advisory Committee,2025-01-01

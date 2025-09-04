@@ -1,0 +1,48 @@
+id,name,type,parent_entity,website_url,description,budget,staff_count,creation_date,legal_source,last_verified
+county-dept-001,Agriculture Weights and Measures,Department,Board of Supervisors,https://www.sandiegocounty.gov/awm,Agricultural inspection and consumer protection,,,,County Code,2024-09-03
+county-dept-002,Aging & Independence Services,Department,Board of Supervisors,https://www.sandiegocounty.gov/ais,Senior services and disability support,,,,County Code,2024-09-03
+county-dept-003,Animal Services,Department,Board of Supervisors,https://www.sandiegocounty.gov/das,Animal control and shelter services,,,,County Code,2024-09-03
+county-dept-004,Assessor/Recorder/County Clerk,Department,Board of Supervisors,https://www.sandiegocounty.gov/arcc,Property assessment and public records,,,,County Charter,2024-09-03
+county-dept-005,Auditor and Controller,Department,Board of Supervisors,https://www.sandiegocounty.gov/auditor,Financial oversight and accounting,,,,County Charter,2024-09-03
+county-dept-006,Behavioral Health Services,Department,Board of Supervisors,https://www.sandiegocounty.gov/bhs,Mental health and substance abuse services,,,,County Code,2024-09-03
+county-dept-007,Chief Administrative Office,Office,Board of Supervisors,https://www.sandiegocounty.gov/cao,Executive administration and management,,,,County Charter,2024-09-03
+county-dept-008,Child and Family Well-Being,Department,Board of Supervisors,https://www.sandiegocounty.gov/cfwb,Child protection and family services,,,,County Code,2024-09-03
+county-dept-009,Child Support Services,Department,Board of Supervisors,https://www.sandiegocounty.gov/css,Child support enforcement and collection,,,,State/Federal Programs,2024-09-03
+county-dept-010,Citizens Law Enforcement Review Board,Board,Board of Supervisors,https://www.sandiegocounty.gov/clerb,Police oversight and civilian review,,,,County Ordinance,2024-09-03
+county-dept-011,Civil Service Commission,Commission,Board of Supervisors,https://www.sandiegocounty.gov/csc,Personnel and employment oversight,,,,County Charter,2024-09-03
+county-dept-012,Clerk of the Board of Supervisors,Office,Board of Supervisors,https://www.sandiegocounty.gov/cob,Board meeting administration and records,,,,County Charter,2024-09-03
+county-dept-013,Communications Office,Office,Chief Administrative Office,https://www.sandiegocounty.gov/communications,Public information and media relations,,,,County Code,2024-09-03
+county-dept-014,County Counsel,Department,Board of Supervisors,https://www.sandiegocounty.gov/counsel,Legal services and advice,,,,County Charter,2024-09-03
+county-dept-015,District Attorney,Department,Elected Official,https://www.sdcda.org,Criminal prosecution and legal enforcement,,,,California Government Code,2024-09-03
+county-dept-016,Economic Development and Government Affairs,Department,Chief Administrative Office,https://www.sandiegocounty.gov/edga,Economic development and intergovernmental relations,,,,County Code,2024-09-03
+county-dept-017,Emergency Services,Office,Chief Administrative Office,https://www.sandiegocounty.gov/oes,Emergency preparedness and disaster response,,,,County Code,2024-09-03
+county-dept-018,Environmental Health and Quality,Department,Board of Supervisors,https://www.sandiegocounty.gov/deh,Environmental protection and public health,,,,County Code,2024-09-03
+county-dept-019,Equity and Racial Justice,Office,Chief Administrative Office,https://www.sandiegocounty.gov/equity,Equity initiatives and racial justice programs,,,,County Resolution,2024-09-03
+county-dept-020,Ethics and Compliance,Office,Chief Administrative Office,https://www.sandiegocounty.gov/ethics,Ethics oversight and compliance monitoring,,,,County Ordinance,2024-09-03
+county-dept-021,Evaluation Performance and Analytics,Office,Chief Administrative Office,https://www.sandiegocounty.gov/epa,Performance measurement and data analysis,,,,County Code,2024-09-03
+county-dept-022,Finance and General Government Group,Group,Chief Administrative Office,https://www.sandiegocounty.gov/cao,Financial management and administrative services,,,,County Code,2024-09-03
+county-dept-023,County Fire,Department,Board of Supervisors,https://www.sdcountyfire.org,Fire protection and emergency medical services,,,,County Code,2024-09-03
+county-dept-024,General Services,Department,Chief Administrative Office,https://www.sandiegocounty.gov/gs,Facilities management and procurement,,,,County Code,2024-09-03
+county-dept-025,Grand Jury,Body,Superior Court,https://www.sandiegocounty.gov/grandjury,Civil oversight and investigation,,,,California Penal Code,2024-09-03
+county-dept-026,Health & Human Services Agency,Agency,Board of Supervisors,https://www.sandiegocounty.gov/hhsa,Public health and social services coordination,,,,County Code,2024-09-03
+county-dept-027,Housing and Community Development,Department,Board of Supervisors,https://www.sandiegocounty.gov/hcd,Housing programs and community development,,,,County Code,2024-09-03
+county-dept-028,Human Resources,Department,Chief Administrative Office,https://www.sandiegocounty.gov/hr,Personnel administration and employee services,,,,County Code,2024-09-03
+county-dept-029,Labor Standards and Enforcement,Office,Chief Administrative Office,https://www.sandiegocounty.gov/lse,Labor standards enforcement and workplace rights,,,,County Code,2024-09-03
+county-dept-030,Land Use and Environment Group,Group,Chief Administrative Office,https://www.sandiegocounty.gov/lueg,Land use planning and environmental services,,,,County Code,2024-09-03
+county-dept-031,Library,Department,Board of Supervisors,https://www.sdcl.org,Public library services and programs,,,,County Code,2024-09-03
+county-dept-032,Medical Care Services,Department,Board of Supervisors,https://www.sandiegocounty.gov/mcs,Medical care for underserved populations,,,,County Code,2024-09-03
+county-dept-033,Medical Examiner,Office,Board of Supervisors,https://www.sandiegocounty.gov/me,Death investigation and forensic pathology,,,,County Code,2024-09-03
+county-dept-034,Parks and Recreation,Department,Board of Supervisors,https://www.sdparks.org,County parks and recreational services,,,,County Code,2024-09-03
+county-dept-035,Planning & Development Services,Department,Land Use and Environment Group,https://www.sandiegocounty.gov/pds,Land use planning and development review,,,,County Code,2024-09-03
+county-dept-036,Probation,Department,Board of Supervisors,https://www.sandiegocounty.gov/probation,Adult and juvenile probation services,,,,California Penal Code,2024-09-03
+county-dept-037,Public Defender,Office,Elected Official,https://www.sandiegocounty.gov/pubdef,Legal defense for indigent defendants,,,,California Government Code,2024-09-03
+county-dept-038,Public Health,Department,Health & Human Services Agency,https://www.sandiegocounty.gov/hhsa,Disease prevention and health promotion,,,,California Health and Safety Code,2024-09-03
+county-dept-039,Public Safety Group,Group,Chief Administrative Office,https://www.sandiegocounty.gov/cao,Public safety coordination and oversight,,,,County Code,2024-09-03
+county-dept-040,Public Works,Department,Land Use and Environment Group,https://www.sandiegocounty.gov/dpw,Infrastructure maintenance and construction,,,,County Code,2024-09-03
+county-dept-041,Purchasing and Contracting,Department,Finance and General Government Group,https://www.sandiegocounty.gov/purchasing,Procurement and contract administration,,,,County Code,2024-09-03
+county-dept-042,Registrar of Voters,Office,Board of Supervisors,https://www.sdvote.com,Election administration and voter registration,,,,California Elections Code,2024-09-03
+county-dept-043,Self-Sufficiency Services,Department,Health & Human Services Agency,https://www.sandiegocounty.gov/sss,Public assistance and social services,,,,State/Federal Programs,2024-09-03
+county-dept-044,Sheriff,Department,Elected Official,https://www.sdsheriff.gov,Law enforcement and detention services,,,,California Government Code,2024-09-03
+county-dept-045,Technology Office,Office,Chief Administrative Office,https://www.sandiegocounty.gov/cto,Information technology services and support,,,,County Code,2024-09-03
+county-dept-046,Treasurer-Tax Collector,Office,Board of Supervisors,https://www.sdtreastax.com,Tax collection and treasury management,,,,County Charter,2024-09-03
+county-dept-047,UC Cooperative Extension,Office,UC System,https://ucanr.edu/sites/sdsmallfarms,Agricultural research and extension services,,,,State/Federal Partnership,2024-09-03

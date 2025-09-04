@@ -1,0 +1,174 @@
+id,name,type,jurisdiction,parent_entity,website_url,description,legal_source,last_verified
+mayor-001,Todd Gloria,Mayor,City of San Diego,,https://www.sandiego.gov/mayor,Chief Executive Officer of the City,San Diego City Charter,2024-09-03
+council-001,Joe LaCava,City Council President,City of San Diego,,https://www.sandiego.gov/citycouncil/cd1,Legislative body member - District 1,San Diego City Charter,2024-09-03
+council-002,Jennifer Campbell,Councilmember,City of San Diego,,https://www.sandiego.gov/citycouncil/cd2,Legislative body member - District 2,San Diego City Charter,2024-09-03
+council-003,Stephen Whitburn,Councilmember,City of San Diego,,https://www.sandiego.gov/citycouncil/cd3,Legislative body member - District 3,San Diego City Charter,2024-09-03
+council-004,Henry L. Foster III,Councilmember,City of San Diego,,https://www.sandiego.gov/citycouncil/cd4,Legislative body member - District 4,San Diego City Charter,2024-09-03
+council-005,Marni von Wilpert,Councilmember,City of San Diego,,https://www.sandiego.gov/citycouncil/cd5,Legislative body member - District 5,San Diego City Charter,2024-09-03
+council-006,Kent Lee,Council President Pro Tem,City of San Diego,,https://www.sandiego.gov/citycouncil/cd6,Legislative body member - District 6,San Diego City Charter,2024-09-03
+council-007,Raul Campillo,Councilmember,City of San Diego,,https://www.sandiego.gov/citycouncil/cd7,Legislative body member - District 7,San Diego City Charter,2024-09-03
+council-008,Vivian Moreno,Councilmember,City of San Diego,,https://www.sandiego.gov/citycouncil/cd8,Legislative body member - District 8,San Diego City Charter,2024-09-03
+council-009,Sean Elo-Rivera,Councilmember,City of San Diego,,https://www.sandiego.gov/citycouncil/cd9,Legislative body member - District 9,San Diego City Charter,2024-09-03
+supervisor-001,Paloma Aguirre,County Supervisor,County of San Diego,,https://www.sandiegocounty.gov/bos/district1,County legislative body member - District 1,County Charter,2024-09-03
+supervisor-002,Joel Anderson,County Supervisor,County of San Diego,,https://www.supervisorjoelanderson.com/,County legislative body member - District 2,County Charter,2024-09-03
+supervisor-003,Terra Lawson-Remer,County Supervisor,County of San Diego,,https://www.sandiegocounty.gov/bos/district3,County legislative body member - District 3,County Charter,2024-09-03
+supervisor-004,Monica Montgomery Steppe,County Supervisor,County of San Diego,,https://www.sandiegocounty.gov/bos/district4,County legislative body member - District 4,County Charter,2024-09-03
+supervisor-005,Jim Desmond,County Supervisor,County of San Diego,,https://www.sandiegocounty.gov/bos/district5,County legislative body member - District 5,County Charter,2024-09-03
+city-dept-001,City Auditor,Independent Office,San Diego County,Mayor,https://www.sandiego.gov/auditor,Independent audit and oversight functions,San Diego City Charter,2024-09-03
+city-dept-002,City Clerk,Administrative Office,San Diego County,Mayor,https://www.sandiego.gov/city-clerk,Records management and election administration,San Diego City Charter,2024-09-03
+city-dept-003,City Planning,Department,San Diego County,Mayor,https://www.sandiego.gov/planning,Long-range planning and community development,San Diego City Charter,2024-09-03
+city-dept-004,City Treasurer,Department,San Diego County,Mayor,https://www.sandiego.gov/treasurer,Financial management and investment oversight,San Diego City Charter,2024-09-03
+city-dept-005,Parking Administration,Division,San Diego County,City Treasurer,https://www.sandiego.gov/parking,Parking enforcement and management,San Diego Municipal Code,2024-09-03
+city-dept-006,Communication,Department,San Diego County,Mayor,https://www.sandiego.gov/communications,Public communications and media relations,San Diego Municipal Code,2024-09-03
+city-dept-007,Compliance,Office,San Diego County,Mayor,https://www.sandiego.gov/compliance,Regulatory compliance and oversight,San Diego Municipal Code,2024-09-03
+city-dept-008,Development Services,Department,San Diego County,Mayor,https://www.sandiego.gov/development-services,Building permits and land development review,San Diego City Charter,2024-09-03
+city-dept-009,Building & Land Use Enforcement,Division,San Diego County,Development Services,https://www.sandiego.gov/development-services,Code enforcement and building inspection,San Diego Municipal Code,2024-09-03
+city-dept-010,Economic Development,Department,San Diego County,Mayor,https://www.sandiego.gov/economic-development,Business development and economic growth,San Diego City Charter,2024-09-03
+city-dept-011,Airports,Division,San Diego County,Economic Development,https://www.san.org,Airport management and operations,San Diego Municipal Code,2024-09-03
+city-dept-012,Community Development Block Grant,Division,San Diego County,Economic Development,https://www.sandiego.gov/cdbg,Federal community development programs,Federal Programs,2024-09-03
+city-dept-013,Cultural Affairs,Division,San Diego County,Economic Development,https://www.sandiego.gov/arts-culture,Arts and cultural program administration,San Diego Municipal Code,2024-09-03
+city-dept-014,Real Estate,Division,San Diego County,Economic Development,https://www.sandiego.gov/real-estate,City property management and development,San Diego Municipal Code,2024-09-03
+city-dept-015,Office of Emergency Services,Office,San Diego County,Mayor,https://www.sandiego.gov/emergency,Emergency preparedness and response coordination,San Diego Municipal Code,2024-09-03
+city-dept-016,Engineering & Capital Projects,Department,San Diego County,Mayor,https://www.sandiego.gov/engineering,Infrastructure design and capital project management,San Diego City Charter,2024-09-03
+city-dept-017,ADA Compliance and Accessibility,Division,San Diego County,Engineering & Capital Projects,https://www.sandiego.gov/ada,Americans with Disabilities Act compliance,Federal Law,2024-09-03
+city-dept-018,Engineering Branch,Division,San Diego County,Engineering & Capital Projects,https://www.sandiego.gov/engineering,Civil engineering and infrastructure design,San Diego Municipal Code,2024-09-03
+city-dept-019,Environmental Services,Department,San Diego County,Mayor,https://www.sandiego.gov/environmental-services,Waste management and environmental programs,San Diego City Charter,2024-09-03
+city-dept-020,Finance,Department,San Diego County,Mayor,https://www.sandiego.gov/finance,Financial planning and budget management,San Diego City Charter,2024-09-03
+city-dept-021,Debt Management,Division,San Diego County,Finance,https://www.sandiego.gov/finance,Municipal debt and bond administration,San Diego Municipal Code,2024-09-03
+city-dept-022,Fire-Rescue,Department,San Diego County,Mayor,https://www.sandiego.gov/fire,Fire suppression and emergency medical services,San Diego City Charter,2024-09-03
+city-dept-023,Lifeguard Services,Division,San Diego County,Fire-Rescue,https://www.sandiego.gov/lifeguards,Beach and water safety services,San Diego Municipal Code,2024-09-03
+city-dept-024,General Services,Department,San Diego County,Mayor,https://www.sandiego.gov/general-services,Facilities and fleet management,San Diego City Charter,2024-09-03
+city-dept-025,Facilities Services,Division,San Diego County,General Services,https://www.sandiego.gov/facilities,City facility maintenance and management,San Diego Municipal Code,2024-09-03
+city-dept-026,Fleet Operations,Division,San Diego County,General Services,https://www.sandiego.gov/fleet,City vehicle fleet management,San Diego Municipal Code,2024-09-03
+city-dept-027,Government Affairs,Office,San Diego County,Mayor,https://www.sandiego.gov/government-affairs,Intergovernmental relations and policy coordination,San Diego Municipal Code,2024-09-03
+city-dept-028,Homelessness Strategies and Solutions,Department,San Diego County,Mayor,https://www.sandiego.gov/homelessness,Homelessness response and housing services,San Diego Municipal Code,2024-09-03
+city-dept-029,Human Resources,Department,San Diego County,Mayor,https://www.sandiego.gov/human-resources,Personnel management and employee services,San Diego City Charter,2024-09-03
+city-dept-030,Independent Budget Analyst,Independent Office,San Diego County,City Council,https://www.sandiego.gov/iba,Independent budget analysis for City Council,San Diego City Charter,2024-09-03
+city-dept-031,Race and Equity,Division,San Diego County,Independent Budget Analyst,https://www.sandiego.gov/race-equity,Equity analysis and policy review,San Diego Municipal Code,2024-09-03
+city-dept-032,Information Technology,Department,San Diego County,Mayor,https://www.sandiego.gov/it,Technology services and digital infrastructure,San Diego City Charter,2024-09-03
+city-dept-033,Library,Department,San Diego County,Mayor,https://www.sandiego.gov/public-library,Public library services and programs,San Diego City Charter,2024-09-03
+city-dept-034,Child and Youth Success,Division,San Diego County,Library,https://www.sandiego.gov/library,Youth development and educational programs,San Diego Municipal Code,2024-09-03
+city-dept-035,Parks & Recreation,Department,San Diego County,Mayor,https://www.sandiego.gov/parks-recreation,Parks maintenance and recreational programs,San Diego City Charter,2024-09-03
+city-dept-036,Performance & Analytics,Office,San Diego County,Mayor,https://www.sandiego.gov/performance,Performance management and data analytics,San Diego Municipal Code,2024-09-03
+city-dept-037,Personnel,Department,San Diego County,Mayor,https://www.sandiego.gov/personnel,Employee relations and personnel administration,San Diego City Charter,2024-09-03
+city-dept-038,Police,Department,San Diego County,Mayor,https://www.sandiego.gov/police,Law enforcement and public safety,San Diego City Charter,2024-09-03
+city-dept-039,Public Utilities,Department,San Diego County,Mayor,https://www.sandiego.gov/public-utilities,Water and wastewater services,San Diego City Charter,2024-09-03
+city-dept-040,Reservoir Lakes,Division,San Diego County,Public Utilities,https://www.sandiego.gov/reservoirs,City reservoir management and maintenance,San Diego Municipal Code,2024-09-03
+city-dept-041,Purchasing & Contracts,Department,San Diego County,Mayor,https://www.sandiego.gov/purchasing,Procurement and contract administration,San Diego City Charter,2024-09-03
+city-dept-042,Equal Opportunity Contracts,Division,San Diego County,Purchasing & Contracts,https://www.sandiego.gov/eoc,Minority and small business contracting programs,San Diego Municipal Code,2024-09-03
+city-dept-043,Risk Management,Department,San Diego County,Mayor,https://www.sandiego.gov/risk-management,Insurance and liability management,San Diego City Charter,2024-09-03
+city-dept-044,Special Events & Filming,Department,San Diego County,Mayor,https://www.sandiego.gov/special-events,Event permitting and film location services,San Diego Municipal Code,2024-09-03
+city-dept-045,Stormwater,Department,San Diego County,Mayor,https://www.sandiego.gov/stormwater,Stormwater management and watershed protection,San Diego Municipal Code,2024-09-03
+city-dept-046,Transportation,Department,San Diego County,Mayor,https://www.sandiego.gov/transportation,Transportation planning and traffic management,San Diego City Charter,2024-09-03
+city-dept-047,Street Division,Division,San Diego County,Transportation,https://www.sandiego.gov/streets,Street maintenance and traffic operations,San Diego Municipal Code,2024-09-03
+county-dept-001,Agriculture Weights and Measures,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/awm,Agricultural inspection and consumer protection,County Code,2024-09-03
+county-dept-002,Aging & Independence Services,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/ais,Senior services and disability support,County Code,2024-09-03
+county-dept-003,Animal Services,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/das,Animal control and shelter services,County Code,2024-09-03
+county-dept-004,Assessor/Recorder/County Clerk,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/arcc,Property assessment and public records,County Charter,2024-09-03
+county-dept-005,Auditor and Controller,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/auditor,Financial oversight and accounting,County Charter,2024-09-03
+county-dept-006,Behavioral Health Services,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/bhs,Mental health and substance abuse services,County Code,2024-09-03
+county-dept-007,Chief Administrative Office,Office,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/cao,Executive administration and management,County Charter,2024-09-03
+county-dept-008,Child and Family Well-Being,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/cfwb,Child protection and family services,County Code,2024-09-03
+county-dept-009,Child Support Services,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/css,Child support enforcement and collection,State/Federal Programs,2024-09-03
+county-dept-010,Citizens Law Enforcement Review Board,Board,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/clerb,Police oversight and civilian review,County Ordinance,2024-09-03
+county-dept-011,Civil Service Commission,Commission,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/csc,Personnel and employment oversight,County Charter,2024-09-03
+county-dept-012,Clerk of the Board of Supervisors,Office,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/cob,Board meeting administration and records,County Charter,2024-09-03
+county-dept-013,Communications Office,Office,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/communications,Public information and media relations,County Code,2024-09-03
+county-dept-014,County Counsel,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/counsel,Legal services and advice,County Charter,2024-09-03
+county-dept-015,District Attorney,Department,San Diego County,Elected Official,https://www.sdcda.org,Criminal prosecution and legal enforcement,California Government Code,2024-09-03
+county-dept-016,Economic Development and Government Affairs,Department,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/edga,Economic development and intergovernmental relations,County Code,2024-09-03
+county-dept-017,Emergency Services,Office,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/oes,Emergency preparedness and disaster response,County Code,2024-09-03
+county-dept-018,Environmental Health and Quality,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/deh,Environmental protection and public health,County Code,2024-09-03
+county-dept-019,Equity and Racial Justice,Office,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/equity,Equity initiatives and racial justice programs,County Resolution,2024-09-03
+county-dept-020,Ethics and Compliance,Office,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/ethics,Ethics oversight and compliance monitoring,County Ordinance,2024-09-03
+county-dept-021,Evaluation Performance and Analytics,Office,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/epa,Performance measurement and data analysis,County Code,2024-09-03
+county-dept-022,Finance and General Government Group,Group,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/cao,Financial management and administrative services,County Code,2024-09-03
+county-dept-023,County Fire,Department,San Diego County,Board of Supervisors,https://www.sdcountyfire.org,Fire protection and emergency medical services,County Code,2024-09-03
+county-dept-024,General Services,Department,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/gs,Facilities management and procurement,County Code,2024-09-03
+county-dept-025,Grand Jury,Body,San Diego County,Superior Court,https://www.sandiegocounty.gov/grandjury,Civil oversight and investigation,California Penal Code,2024-09-03
+county-dept-026,Health & Human Services Agency,Agency,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/hhsa,Public health and social services coordination,County Code,2024-09-03
+county-dept-027,Housing and Community Development,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/hcd,Housing programs and community development,County Code,2024-09-03
+county-dept-028,Human Resources,Department,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/hr,Personnel administration and employee services,County Code,2024-09-03
+county-dept-029,Labor Standards and Enforcement,Office,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/lse,Labor standards enforcement and workplace rights,County Code,2024-09-03
+county-dept-030,Land Use and Environment Group,Group,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/lueg,Land use planning and environmental services,County Code,2024-09-03
+county-dept-031,Library,Department,San Diego County,Board of Supervisors,https://www.sdcl.org,Public library services and programs,County Code,2024-09-03
+county-dept-032,Medical Care Services,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/mcs,Medical care for underserved populations,County Code,2024-09-03
+county-dept-033,Medical Examiner,Office,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/me,Death investigation and forensic pathology,County Code,2024-09-03
+county-dept-034,Parks and Recreation,Department,San Diego County,Board of Supervisors,https://www.sdparks.org,County parks and recreational services,County Code,2024-09-03
+county-dept-035,Planning & Development Services,Department,San Diego County,Land Use and Environment Group,https://www.sandiegocounty.gov/pds,Land use planning and development review,County Code,2024-09-03
+county-dept-036,Probation,Department,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/probation,Adult and juvenile probation services,California Penal Code,2024-09-03
+county-dept-037,Public Defender,Office,San Diego County,Elected Official,https://www.sandiegocounty.gov/pubdef,Legal defense for indigent defendants,California Government Code,2024-09-03
+county-dept-038,Public Health,Department,San Diego County,Health & Human Services Agency,https://www.sandiegocounty.gov/hhsa,Disease prevention and health promotion,California Health and Safety Code,2024-09-03
+county-dept-039,Public Safety Group,Group,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/cao,Public safety coordination and oversight,County Code,2024-09-03
+county-dept-040,Public Works,Department,San Diego County,Land Use and Environment Group,https://www.sandiegocounty.gov/dpw,Infrastructure maintenance and construction,County Code,2024-09-03
+county-dept-041,Purchasing and Contracting,Department,San Diego County,Finance and General Government Group,https://www.sandiegocounty.gov/purchasing,Procurement and contract administration,County Code,2024-09-03
+county-dept-042,Registrar of Voters,Office,San Diego County,Board of Supervisors,https://www.sdvote.com,Election administration and voter registration,California Elections Code,2024-09-03
+county-dept-043,Self-Sufficiency Services,Department,San Diego County,Health & Human Services Agency,https://www.sandiegocounty.gov/sss,Public assistance and social services,State/Federal Programs,2024-09-03
+county-dept-044,Sheriff,Department,San Diego County,Elected Official,https://www.sdsheriff.gov,Law enforcement and detention services,California Government Code,2024-09-03
+county-dept-045,Technology Office,Office,San Diego County,Chief Administrative Office,https://www.sandiegocounty.gov/cto,Information technology services and support,County Code,2024-09-03
+county-dept-046,Treasurer-Tax Collector,Office,San Diego County,Board of Supervisors,https://www.sdtreastax.com,Tax collection and treasury management,County Charter,2024-09-03
+county-dept-047,UC Cooperative Extension,Office,San Diego County,UC System,https://ucanr.edu/sites/sdsmallfarms,Agricultural research and extension services,State/Federal Partnership,2024-09-03
+regional-001,San Diego Association of Governments,Joint Powers Authority,San Diego County,,https://www.sandag.org,Regional planning organization and transportation authority,California Government Code,2024-09-03
+regional-002,Metropolitan Transit System,Transit District,San Diego County,,https://www.sdmts.com,Public transportation operator for San Diego metropolitan area,California Public Utilities Code,2024-09-03
+regional-003,North County Transit District,Transit District,North San Diego County,,https://gonctd.com,Public transportation operator for North County,California Senate Bill 802,2024-09-03
+regional-004,San Diego County Regional Airport Authority,Special District,San Diego County,,https://www.san.org,Airport management and aviation planning,California Assembly Bill 93,2024-09-03
+regional-005,San Diego Unified Port District,Special District,San Diego Bay,,https://www.portofsandiego.org,Bay management and port operations,California Senate Bill 41,2024-09-03
+regional-006,San Diego County Water Authority,Special District,Western San Diego County,,https://www.sdcwa.org,Wholesale water supply and distribution,California State Legislature,2024-09-03
+regional-007,San Diego Regional Water Quality Control Board,State Board,San Diego County,,https://www.waterboards.ca.gov/sandiego,Water quality regulation and enforcement,California Water Code,2024-09-03
+regional-008,San Diego Air Pollution Control District,Special District,San Diego County,,https://www.sdapcd.org,Air quality regulation and monitoring,California Health and Safety Code,2024-09-03
+regional-009,San Diego County Regional Transportation Commission,Regional Agency,San Diego County,,https://www.sandag.org,Regional transportation planning and funding coordination,California Government Code,2024-09-03
+regional-010,California Regional Water Quality Control Board Region 9,State Agency,San Diego and Imperial Counties,,https://www.waterboards.ca.gov/sandiego,Water quality protection and regulation,Porter-Cologne Water Quality Control Act,2024-09-03
+city-board-001,Planning Commission,Commission,City of San Diego,Mayor,https://www.sandiego.gov/planning-commission,General Plan recommendations and permit decisions,San Diego Municipal Code,2024-09-03
+city-board-002,Ethics Commission,Commission,City of San Diego,Mayor,https://www.sandiego.gov/ethics,Monitor governmental ethics laws and conduct investigations,San Diego Municipal Code Chapter II Article 6 Division 4,2024-09-03
+city-board-003,Civil Service Commission,Commission,City of San Diego,Mayor,https://www.sandiego.gov/empopp/about/civilser,Classified employee policies and procedures,San Diego Municipal Code,2024-09-03
+city-board-004,Housing Commission Board,Commission,City of San Diego,Mayor,https://onboard.sandiego.gov/board/3464,Housing Authority oversight and policy,San Diego Municipal Code Chapter IX Article 8 Section 98.29,2024-09-03
+city-board-005,Historical Resources Board,Board,City of San Diego,Mayor,https://www.sandiego.gov/planning/public-hearings-meetings/historical-resources-board,Historical site designation and development review,San Diego Municipal Code Section 111.0206,2024-09-03
+city-board-006,Parks and Recreation Board,Board,City of San Diego,Mayor,https://www.sandiego.gov/parkandrecboard,Park acquisition and development advisory,San Diego Municipal Code Section 26.30,2024-09-03
+city-board-007,Board of Library Commissioners,Board,City of San Diego,Mayor,https://www.sandiego.gov/public-library/about-the-library/commissioners,Public Library system advisory,San Diego Municipal Code,2024-09-03
+city-board-008,Commission on Police Practices,Commission,City of San Diego,City Council,https://www.sandiego.gov/cpp,Independent police oversight and investigation,City Charter Section 41.2 - Measure B,2024-09-03
+city-board-009,Commission for Arts and Culture,Commission,City of San Diego,Mayor,https://www.sandiego.gov/boards-and-commissions/arts-culture,Arts and cultural policy advisory,San Diego Municipal Code,2024-09-03
+city-board-010,Accessibility Advisory Board,Board,City of San Diego,Mayor,https://onboard.sandiego.gov,Accessibility policy and compliance advisory,San Diego Municipal Code,2024-09-03
+city-board-011,Airports Advisory Committee,Committee,City of San Diego,Mayor,https://onboard.sandiego.gov,General aviation advisory,San Diego Municipal Code,2024-09-03
+city-board-012,Audit Committee,Committee,City of San Diego,Mayor,https://onboard.sandiego.gov,City auditing and internal controls oversight,San Diego Municipal Code,2024-09-03
+city-board-013,Balboa Park Committee,Committee,City of San Diego,Mayor,https://onboard.sandiego.gov,Balboa Park management policy advisory,San Diego Municipal Code,2024-09-03
+city-board-014,Board of Building Appeals and Advisors,Board,City of San Diego,Mayor,https://onboard.sandiego.gov,Building code appeals and advisory,San Diego Municipal Code,2024-09-03
+city-board-015,Citizens Equal Opportunity Commission,Commission,City of San Diego,Mayor,https://onboard.sandiego.gov,Equal Opportunity Program oversight,San Diego Municipal Code,2024-09-03
+city-board-016,Climate Advisory Board,Board,City of San Diego,Mayor,https://onboard.sandiego.gov,Climate and sustainability policy advisory,San Diego Municipal Code,2024-09-03
+county-board-001,Planning Commission,Commission,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/content/sdc/pds,Land use planning for unincorporated areas,County Planning Regulations,2024-09-03
+county-board-002,Citizens Law Enforcement Review Board,Board,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/clerb,Sheriff and probation oversight,County Ordinance,2024-09-03
+county-board-003,Human Relations Commission,Commission,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov/content/sdc/lwhrc,Human relations and civil rights advocacy,Board Resolution May 19 2020,2024-09-03
+county-board-004,Community Action Board,Board,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov,Community Services Block Grant oversight,CSBG Act Requirements,2024-09-03
+county-board-005,Behavioral Health Advisory Board,Board,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov,Behavioral health services oversight,State Mental Health Requirements,2024-09-03
+county-board-006,First 5 Commission,Commission,San Diego County,Board of Supervisors,https://www.first5sandiego.org,Early childhood development programs,Proposition 10 Implementation,2024-09-03
+county-board-007,Property Tax Assessment Appeals Board,Board,San Diego County,Board of Supervisors,https://www.sandiegocounty.gov,Property tax assessment appeals,State Property Tax Law,2024-09-03
+sandag-001,SANDAG Board of Directors,Board,Regional,San Diego Association of Governments,https://www.sandag.org/meetings-and-events/board-of-directors,Regional planning and transportation governance board,Regional Authority Governance,2024-09-03
+sandag-002,Executive Committee,Committee,Regional,SANDAG,https://www.sandag.org/meetings-and-events/policy-advisory-committees/executive,Budget oversight and Board agenda setting,Regional Authority Governance,2024-09-03
+sandag-003,Transportation Committee,Committee,Regional,SANDAG,https://www.sandag.org/meetings-and-events/policy-advisory-committees/transportation,Regional Plan and transportation planning oversight,Regional Authority Governance,2024-09-03
+sandag-004,Regional Planning Committee,Committee,Regional,SANDAG,https://www.sandag.org/meetings-and-events/policy-advisory-committees/regional-planning,Regional Comprehensive Plan preparation and implementation,Regional Authority Governance,2024-09-03
+sandag-005,Audit Committee,Committee,Regional,SANDAG,https://www.sandag.org/meetings-and-events/policy-advisory-committees/audit,Internal control guidelines and audit recommendations,Regional Authority Governance,2024-09-03
+sandag-006,Borders Committee,Committee,Regional,SANDAG,https://www.sandag.org/meetings-and-events/policy-advisory-committees/borders,Cross-border planning and tribal government relations,Regional Authority Governance,2024-09-03
+sandag-007,Public Safety Committee,Committee,Regional,SANDAG,https://www.sandag.org/meetings-and-events/policy-advisory-committees,Regional public safety coordination,Regional Authority Governance,2024-09-03
+mts-001,MTS Board of Directors,Board,Regional,Metropolitan Transit System,https://www.sdmts.com/about/meetings-and-agendas/board-directors,Transit system governance and policy,Regional Authority Governance,2024-09-03
+mts-002,Joint Audit Oversight Budget Development and Executive Committee,Committee,Regional,MTS,https://www.sdmts.com/about/meetings-and-agendas/executive-committee,Combined oversight committee (merged for 2025),Regional Authority Governance,2024-09-03
+mts-003,Accessible Services Advisory Committee,Committee,Regional,MTS,https://www.sdmts.com/about/meetings-and-agendas/advisory-committee,Accessibility services oversight,Regional Authority Governance,2024-09-03
+mts-004,Public Security Committee,Committee,Regional,MTS,https://www.sdmts.com/about/meetings-and-agendas,Transit security oversight,Regional Authority Governance,2024-09-03
+mts-005,Taxicab Advisory Committee,Committee,Regional,MTS,https://www.sdmts.com/business-center/for-hire-vehicle-administration/advisory-committee,Taxicab industry regulation feedback,Regional Authority Governance,2024-09-03
+nctd-001,NCTD Board of Directors,Board,Regional,North County Transit District,https://gonctd.com/about-nctd/board-information/,North County transit governance,Regional Authority Governance,2024-09-03
+nctd-002,Performance Administration and Finance Committee,Committee,Regional,NCTD,https://gonctd.com/about-nctd/board-information/,Financial and administrative oversight,Regional Authority Governance,2024-09-03
+nctd-003,Marketing Service Planning and Business Development Committee,Committee,Regional,NCTD,https://gonctd.com/about-nctd/board-information/,Service planning and marketing oversight,Regional Authority Governance,2024-09-03
+nctd-004,Executive Committee,Committee,Regional,NCTD,https://gonctd.com/about-nctd/board-information/,Executive oversight and policy,Regional Authority Governance,2024-09-03
+airport-001,San Diego County Regional Airport Authority Board,Board,Regional,San Diego Airport Authority,https://www.san.org/airport-authority/board-members,Airport governance and policy,Regional Authority Governance,2024-09-03
+airport-002,Airport Authority Planning Committee,Committee,Regional,San Diego Airport Authority,https://www.san.org/Airport-Authority/Special-Committees,Airport planning oversight,Regional Authority Governance,2024-09-03
+airport-003,Airport Authority Executive Committee,Committee,Regional,San Diego Airport Authority,https://www.san.org/Airport-Authority/Special-Committees,Management oversight,Regional Authority Governance,2024-09-03
+airport-004,Airport Oversight Committee,Committee,Regional,San Diego Airport Authority,https://www.san.org/Airport-Authority/Special-Committees,Board oversight and review,Regional Authority Governance,2024-09-03
+airport-005,Airport Art Advisory Committee,Committee,Regional,San Diego Airport Authority,https://www.san.org/Airport-Authority/Meetings-Agendas/Airport-Art-Advisory-Committee,Airport art program oversight,Regional Authority Governance,2024-09-03
+port-001,San Diego Unified Port District Board of Commissioners,Board,Regional,San Diego Unified Port District,https://www.portofsandiego.org/people/board-port-commissioners,Port governance and policy,Regional Authority Governance,2024-09-03
+port-002,Port Environmental Advisory Committee,Committee,Regional,San Diego Unified Port District,https://www.portofsandiego.org/,Environmental policy advisory,Regional Authority Governance,2024-09-03
+water-001,San Diego County Water Authority Board of Directors,Board,Regional,San Diego County Water Authority,https://www.sdcwa.org/about-us/board-of-directors/,Regional water governance,Regional Authority Governance,2024-09-03
+water-002,Administrative and Finance Committee,Committee,Regional,San Diego County Water Authority,https://www.sdcwa.org/about-us/board-of-directors/meetings/,Financial oversight and administration,Regional Authority Governance,2024-09-03
+water-003,Engineering and Operations Committee,Committee,Regional,San Diego County Water Authority,https://www.sdcwa.org/about-us/board-of-directors/meetings/,Engineering and operational oversight,Regional Authority Governance,2024-09-03
+water-004,Imported Water Committee,Committee,Regional,San Diego County Water Authority,https://www.sdcwa.org/about-us/board-of-directors/meetings/,Imported water supply oversight,Regional Authority Governance,2024-09-03
+water-005,Legislation & Public Outreach Committee,Committee,Regional,San Diego County Water Authority,https://www.sdcwa.org/about-us/board-of-directors/meetings/,Legislative and public affairs oversight,Regional Authority Governance,2024-09-03
+water-006,Water Planning and Environmental Committee,Committee,Regional,San Diego County Water Authority,https://www.sdcwa.org/about-us/board-of-directors/meetings/,Water planning and environmental oversight,Regional Authority Governance,2024-09-03
+lafco-001,San Diego LAFCO Commission,Committee,Regional,San Diego Local Agency Formation Commission,https://www.sdlafco.org/,Local government boundary and service oversight,Regional Authority Governance,2024-09-03
+lafco-002,Special Districts Advisory Committee,Committee,Regional,San Diego LAFCO,https://www.sdlafco.org/about/advisory-committees/special-districts-advisory-committee,Special district technical advisory,Regional Authority Governance,2024-09-03

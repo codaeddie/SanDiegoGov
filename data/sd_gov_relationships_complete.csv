@@ -1,0 +1,249 @@
+relationship_id,source_entity_id,target_entity_id,relationship_type,relationship_category,authority_source,description,last_verified
+rel-001,mayor-001,city-dept-001,oversees,hierarchical,San Diego City Charter,Mayor oversees City Auditor independent office,2024-09-03
+rel-002,mayor-001,city-dept-002,oversees,hierarchical,San Diego City Charter,Mayor oversees City Clerk administrative office,2024-09-03
+rel-003,mayor-001,city-dept-003,oversees,hierarchical,San Diego City Charter,Mayor oversees City Planning Department,2024-09-03
+rel-004,mayor-001,city-dept-004,oversees,hierarchical,San Diego City Charter,Mayor oversees City Treasurer Department,2024-09-03
+rel-005,city-dept-004,city-dept-005,reports_to,hierarchical,San Diego Municipal Code,Parking Administration Division reports to City Treasurer,2024-09-03
+rel-006,mayor-001,city-dept-006,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Communication Department,2024-09-03
+rel-007,mayor-001,city-dept-007,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Compliance Office,2024-09-03
+rel-008,mayor-001,city-dept-008,oversees,hierarchical,San Diego City Charter,Mayor oversees Development Services Department,2024-09-03
+rel-009,city-dept-008,city-dept-009,reports_to,hierarchical,San Diego Municipal Code,Building & Land Use Enforcement Division reports to Development Services,2024-09-03
+rel-010,mayor-001,city-dept-010,oversees,hierarchical,San Diego City Charter,Mayor oversees Economic Development Department,2024-09-03
+rel-011,city-dept-010,city-dept-011,reports_to,hierarchical,San Diego Municipal Code,Airports Division reports to Economic Development,2024-09-03
+rel-012,city-dept-010,city-dept-012,reports_to,hierarchical,Federal Programs,Community Development Block Grant Division reports to Economic Development,2024-09-03
+rel-013,city-dept-010,city-dept-013,reports_to,hierarchical,San Diego Municipal Code,Cultural Affairs Division reports to Economic Development,2024-09-03
+rel-014,city-dept-010,city-dept-014,reports_to,hierarchical,San Diego Municipal Code,Real Estate Division reports to Economic Development,2024-09-03
+rel-015,mayor-001,city-dept-015,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Office of Emergency Services,2024-09-03
+rel-016,mayor-001,city-dept-016,oversees,hierarchical,San Diego City Charter,Mayor oversees Engineering & Capital Projects Department,2024-09-03
+rel-017,city-dept-016,city-dept-017,reports_to,hierarchical,Federal Law,ADA Compliance and Accessibility Division reports to Engineering & Capital Projects,2024-09-03
+rel-018,city-dept-016,city-dept-018,reports_to,hierarchical,San Diego Municipal Code,Engineering Branch Division reports to Engineering & Capital Projects,2024-09-03
+rel-019,mayor-001,city-dept-019,oversees,hierarchical,San Diego City Charter,Mayor oversees Environmental Services Department,2024-09-03
+rel-020,mayor-001,city-dept-020,oversees,hierarchical,San Diego City Charter,Mayor oversees Finance Department,2024-09-03
+rel-021,city-dept-020,city-dept-021,reports_to,hierarchical,San Diego Municipal Code,Debt Management Division reports to Finance Department,2024-09-03
+rel-022,mayor-001,city-dept-022,oversees,hierarchical,San Diego City Charter,Mayor oversees Fire-Rescue Department,2024-09-03
+rel-023,city-dept-022,city-dept-023,reports_to,hierarchical,San Diego Municipal Code,Lifeguard Services Division reports to Fire-Rescue,2024-09-03
+rel-024,mayor-001,city-dept-024,oversees,hierarchical,San Diego City Charter,Mayor oversees General Services Department,2024-09-03
+rel-025,city-dept-024,city-dept-025,reports_to,hierarchical,San Diego Municipal Code,Facilities Services Division reports to General Services,2024-09-03
+rel-026,city-dept-024,city-dept-026,reports_to,hierarchical,San Diego Municipal Code,Fleet Operations Division reports to General Services,2024-09-03
+rel-027,mayor-001,city-dept-027,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Government Affairs Office,2024-09-03
+rel-028,mayor-001,city-dept-028,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Homelessness Strategies and Solutions Department,2024-09-03
+rel-029,mayor-001,city-dept-029,oversees,hierarchical,San Diego City Charter,Mayor oversees Human Resources Department,2024-09-03
+rel-030,council-001,city-dept-030,oversees,hierarchical,San Diego City Charter,City Council oversees Independent Budget Analyst office,2024-09-03
+rel-031,city-dept-030,city-dept-031,reports_to,hierarchical,San Diego Municipal Code,Race and Equity Division reports to Independent Budget Analyst,2024-09-03
+rel-032,mayor-001,city-dept-032,oversees,hierarchical,San Diego City Charter,Mayor oversees Information Technology Department,2024-09-03
+rel-033,mayor-001,city-dept-033,oversees,hierarchical,San Diego City Charter,Mayor oversees Library Department,2024-09-03
+rel-034,city-dept-033,city-dept-034,reports_to,hierarchical,San Diego Municipal Code,Child and Youth Success Division reports to Library,2024-09-03
+rel-035,mayor-001,city-dept-035,oversees,hierarchical,San Diego City Charter,Mayor oversees Parks & Recreation Department,2024-09-03
+rel-036,mayor-001,city-dept-036,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Performance & Analytics Office,2024-09-03
+rel-037,mayor-001,city-dept-037,oversees,hierarchical,San Diego City Charter,Mayor oversees Personnel Department,2024-09-03
+rel-038,mayor-001,city-dept-038,oversees,hierarchical,San Diego City Charter,Mayor oversees Police Department,2024-09-03
+rel-039,mayor-001,city-dept-039,oversees,hierarchical,San Diego City Charter,Mayor oversees Public Utilities Department,2024-09-03
+rel-040,city-dept-039,city-dept-040,reports_to,hierarchical,San Diego Municipal Code,Reservoir Lakes Division reports to Public Utilities,2024-09-03
+rel-041,mayor-001,city-dept-041,oversees,hierarchical,San Diego City Charter,Mayor oversees Purchasing & Contracts Department,2024-09-03
+rel-042,city-dept-041,city-dept-042,reports_to,hierarchical,San Diego Municipal Code,Equal Opportunity Contracts Division reports to Purchasing & Contracts,2024-09-03
+rel-043,mayor-001,city-dept-043,oversees,hierarchical,San Diego City Charter,Mayor oversees Risk Management Department,2024-09-03
+rel-044,mayor-001,city-dept-044,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Special Events & Filming Department,2024-09-03
+rel-045,mayor-001,city-dept-045,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Stormwater Department,2024-09-03
+rel-046,mayor-001,city-dept-046,oversees,hierarchical,San Diego City Charter,Mayor oversees Transportation Department,2024-09-03
+rel-047,city-dept-046,city-dept-047,reports_to,hierarchical,San Diego Municipal Code,Street Division reports to Transportation Department,2024-09-03
+rel-048,supervisor-001,county-dept-001,oversees,hierarchical,County Code,Board of Supervisors oversees Agriculture Weights and Measures Department,2024-09-03
+rel-049,supervisor-001,county-dept-002,oversees,hierarchical,County Code,Board of Supervisors oversees Aging & Independence Services Department,2024-09-03
+rel-050,supervisor-001,county-dept-003,oversees,hierarchical,County Code,Board of Supervisors oversees Animal Services Department,2024-09-03
+rel-051,supervisor-001,county-dept-004,oversees,hierarchical,County Charter,Board of Supervisors oversees Assessor/Recorder/County Clerk Department,2024-09-03
+rel-052,supervisor-001,county-dept-005,oversees,hierarchical,County Charter,Board of Supervisors oversees Auditor and Controller Department,2024-09-03
+rel-053,supervisor-001,county-dept-006,oversees,hierarchical,County Code,Board of Supervisors oversees Behavioral Health Services Department,2024-09-03
+rel-054,supervisor-001,county-dept-007,oversees,hierarchical,County Charter,Board of Supervisors oversees Chief Administrative Office,2024-09-03
+rel-055,supervisor-001,county-dept-008,oversees,hierarchical,County Code,Board of Supervisors oversees Child and Family Well-Being Department,2024-09-03
+rel-056,supervisor-001,county-dept-009,oversees,hierarchical,State/Federal Programs,Board of Supervisors oversees Child Support Services Department,2024-09-03
+rel-057,supervisor-001,county-dept-010,oversees,hierarchical,County Ordinance,Board of Supervisors oversees Citizens Law Enforcement Review Board,2024-09-03
+rel-058,supervisor-001,county-dept-011,oversees,hierarchical,County Charter,Board of Supervisors oversees Civil Service Commission,2024-09-03
+rel-059,supervisor-001,county-dept-012,oversees,hierarchical,County Charter,Board of Supervisors oversees Clerk of the Board of Supervisors Office,2024-09-03
+rel-060,county-dept-007,county-dept-013,reports_to,hierarchical,County Code,Communications Office reports to Chief Administrative Office,2024-09-03
+rel-061,supervisor-001,county-dept-014,oversees,hierarchical,County Charter,Board of Supervisors oversees County Counsel Department,2024-09-03
+rel-062,county-dept-007,county-dept-016,reports_to,hierarchical,County Code,Economic Development and Government Affairs reports to Chief Administrative Office,2024-09-03
+rel-063,county-dept-007,county-dept-017,reports_to,hierarchical,County Code,Emergency Services Office reports to Chief Administrative Office,2024-09-03
+rel-064,supervisor-001,county-dept-018,oversees,hierarchical,County Code,Board of Supervisors oversees Environmental Health and Quality Department,2024-09-03
+rel-065,county-dept-007,county-dept-019,reports_to,hierarchical,County Resolution,Equity and Racial Justice Office reports to Chief Administrative Office,2024-09-03
+rel-066,county-dept-007,county-dept-020,reports_to,hierarchical,County Ordinance,Ethics and Compliance Office reports to Chief Administrative Office,2024-09-03
+rel-067,county-dept-007,county-dept-021,reports_to,hierarchical,County Code,Evaluation Performance and Analytics Office reports to Chief Administrative Office,2024-09-03
+rel-068,county-dept-007,county-dept-022,reports_to,hierarchical,County Code,Finance and General Government Group reports to Chief Administrative Office,2024-09-03
+rel-069,supervisor-001,county-dept-023,oversees,hierarchical,County Code,Board of Supervisors oversees County Fire Department,2024-09-03
+rel-070,county-dept-007,county-dept-024,reports_to,hierarchical,County Code,General Services Department reports to Chief Administrative Office,2024-09-03
+rel-071,supervisor-001,county-dept-026,oversees,hierarchical,County Code,Board of Supervisors oversees Health & Human Services Agency,2024-09-03
+rel-072,supervisor-001,county-dept-027,oversees,hierarchical,County Code,Board of Supervisors oversees Housing and Community Development Department,2024-09-03
+rel-073,county-dept-007,county-dept-028,reports_to,hierarchical,County Code,Human Resources Department reports to Chief Administrative Office,2024-09-03
+rel-074,county-dept-007,county-dept-029,reports_to,hierarchical,County Code,Labor Standards and Enforcement Office reports to Chief Administrative Office,2024-09-03
+rel-075,county-dept-007,county-dept-030,reports_to,hierarchical,County Code,Land Use and Environment Group reports to Chief Administrative Office,2024-09-03
+rel-076,supervisor-001,county-dept-031,oversees,hierarchical,County Code,Board of Supervisors oversees Library Department,2024-09-03
+rel-077,supervisor-001,county-dept-032,oversees,hierarchical,County Code,Board of Supervisors oversees Medical Care Services Department,2024-09-03
+rel-078,supervisor-001,county-dept-033,oversees,hierarchical,County Code,Board of Supervisors oversees Medical Examiner Office,2024-09-03
+rel-079,supervisor-001,county-dept-034,oversees,hierarchical,County Code,Board of Supervisors oversees Parks and Recreation Department,2024-09-03
+rel-080,county-dept-030,county-dept-035,reports_to,hierarchical,County Code,Planning & Development Services Department reports to Land Use and Environment Group,2024-09-03
+rel-081,supervisor-001,county-dept-036,oversees,hierarchical,California Penal Code,Board of Supervisors oversees Probation Department,2024-09-03
+rel-082,county-dept-026,county-dept-038,reports_to,hierarchical,California Health and Safety Code,Public Health Department reports to Health & Human Services Agency,2024-09-03
+rel-083,county-dept-007,county-dept-039,reports_to,hierarchical,County Code,Public Safety Group reports to Chief Administrative Office,2024-09-03
+rel-084,county-dept-030,county-dept-040,reports_to,hierarchical,County Code,Public Works Department reports to Land Use and Environment Group,2024-09-03
+rel-085,county-dept-022,county-dept-041,reports_to,hierarchical,County Code,Purchasing and Contracting Department reports to Finance and General Government Group,2024-09-03
+rel-086,supervisor-001,county-dept-042,oversees,hierarchical,California Elections Code,Board of Supervisors oversees Registrar of Voters Office,2024-09-03
+rel-087,county-dept-026,county-dept-043,reports_to,hierarchical,State/Federal Programs,Self-Sufficiency Services Department reports to Health & Human Services Agency,2024-09-03
+rel-088,county-dept-007,county-dept-045,reports_to,hierarchical,County Code,Technology Office reports to Chief Administrative Office,2024-09-03
+rel-089,supervisor-001,county-dept-046,oversees,hierarchical,County Charter,Board of Supervisors oversees Treasurer-Tax Collector Office,2024-09-03
+rel-090,regional-001,sandag-001,oversees,hierarchical,California Government Code,SANDAG as organization oversees SANDAG Board of Directors,2024-09-03
+rel-091,sandag-001,sandag-002,oversees,hierarchical,Regional Authority Governance,SANDAG Board oversees Executive Committee,2024-09-03
+rel-092,sandag-001,sandag-003,oversees,hierarchical,Regional Authority Governance,SANDAG Board oversees Transportation Committee,2024-09-03
+rel-093,sandag-001,sandag-004,oversees,hierarchical,Regional Authority Governance,SANDAG Board oversees Regional Planning Committee,2024-09-03
+rel-094,sandag-001,sandag-005,oversees,hierarchical,Regional Authority Governance,SANDAG Board oversees Audit Committee,2024-09-03
+rel-095,sandag-001,sandag-006,oversees,hierarchical,Regional Authority Governance,SANDAG Board oversees Borders Committee,2024-09-03
+rel-096,sandag-001,sandag-007,oversees,hierarchical,Regional Authority Governance,SANDAG Board oversees Public Safety Committee,2024-09-03
+rel-097,regional-002,mts-001,oversees,hierarchical,California Public Utilities Code,MTS as organization oversees MTS Board of Directors,2024-09-03
+rel-098,mts-001,mts-002,oversees,hierarchical,Regional Authority Governance,MTS Board oversees Joint Audit Oversight Budget Development and Executive Committee,2024-09-03
+rel-099,mts-001,mts-003,oversees,hierarchical,Regional Authority Governance,MTS Board oversees Accessible Services Advisory Committee,2024-09-03
+rel-100,mts-001,mts-004,oversees,hierarchical,Regional Authority Governance,MTS Board oversees Public Security Committee,2024-09-03
+rel-101,mts-001,mts-005,oversees,hierarchical,Regional Authority Governance,MTS Board oversees Taxicab Advisory Committee,2024-09-03
+rel-102,regional-003,nctd-001,oversees,hierarchical,California Senate Bill 802,NCTD as organization oversees NCTD Board of Directors,2024-09-03
+rel-103,nctd-001,nctd-002,oversees,hierarchical,Regional Authority Governance,NCTD Board oversees Performance Administration and Finance Committee,2024-09-03
+rel-104,nctd-001,nctd-003,oversees,hierarchical,Regional Authority Governance,NCTD Board oversees Marketing Service Planning and Business Development Committee,2024-09-03
+rel-105,nctd-001,nctd-004,oversees,hierarchical,Regional Authority Governance,NCTD Board oversees Executive Committee,2024-09-03
+rel-106,regional-004,airport-001,oversees,hierarchical,California Assembly Bill 93,San Diego Airport Authority as organization oversees Airport Authority Board,2024-09-03
+rel-107,airport-001,airport-002,oversees,hierarchical,Regional Authority Governance,Airport Authority Board oversees Planning Committee,2024-09-03
+rel-108,airport-001,airport-003,oversees,hierarchical,Regional Authority Governance,Airport Authority Board oversees Executive Committee,2024-09-03
+rel-109,airport-001,airport-004,oversees,hierarchical,Regional Authority Governance,Airport Authority Board oversees Oversight Committee,2024-09-03
+rel-110,airport-001,airport-005,oversees,hierarchical,Regional Authority Governance,Airport Authority Board oversees Art Advisory Committee,2024-09-03
+rel-111,regional-005,port-001,oversees,hierarchical,California Senate Bill 41,San Diego Unified Port District as organization oversees Port Board of Commissioners,2024-09-03
+rel-112,port-001,port-002,oversees,hierarchical,Regional Authority Governance,Port Board oversees Environmental Advisory Committee,2024-09-03
+rel-113,regional-006,water-001,oversees,hierarchical,California State Legislature,San Diego County Water Authority as organization oversees Water Authority Board,2024-09-03
+rel-114,water-001,water-002,oversees,hierarchical,Regional Authority Governance,Water Authority Board oversees Administrative and Finance Committee,2024-09-03
+rel-115,water-001,water-003,oversees,hierarchical,Regional Authority Governance,Water Authority Board oversees Engineering and Operations Committee,2024-09-03
+rel-116,water-001,water-004,oversees,hierarchical,Regional Authority Governance,Water Authority Board oversees Imported Water Committee,2024-09-03
+rel-117,water-001,water-005,oversees,hierarchical,Regional Authority Governance,Water Authority Board oversees Legislation & Public Outreach Committee,2024-09-03
+rel-118,water-001,water-006,oversees,hierarchical,Regional Authority Governance,Water Authority Board oversees Water Planning and Environmental Committee,2024-09-03
+rel-119,lafco-001,lafco-002,oversees,hierarchical,Regional Authority Governance,San Diego LAFCO Commission oversees Special Districts Advisory Committee,2024-09-03
+rel-120,mayor-001,city-board-001,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Planning Commission,2024-09-03
+rel-121,mayor-001,city-board-002,oversees,hierarchical,San Diego Municipal Code Chapter II Article 6 Division 4,Mayor oversees Ethics Commission,2024-09-03
+rel-122,mayor-001,city-board-003,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Civil Service Commission,2024-09-03
+rel-123,mayor-001,city-board-004,oversees,hierarchical,San Diego Municipal Code Chapter IX Article 8 Section 98.29,Mayor oversees Housing Commission Board,2024-09-03
+rel-124,mayor-001,city-board-005,oversees,hierarchical,San Diego Municipal Code Section 111.0206,Mayor oversees Historical Resources Board,2024-09-03
+rel-125,mayor-001,city-board-006,oversees,hierarchical,San Diego Municipal Code Section 26.30,Mayor oversees Parks and Recreation Board,2024-09-03
+rel-126,mayor-001,city-board-007,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Board of Library Commissioners,2024-09-03
+rel-127,council-001,city-board-008,oversees,hierarchical,City Charter Section 41.2 - Measure B,City Council oversees Commission on Police Practices,2024-09-03
+rel-128,mayor-001,city-board-009,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Commission for Arts and Culture,2024-09-03
+rel-129,mayor-001,city-board-010,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Accessibility Advisory Board,2024-09-03
+rel-130,mayor-001,city-board-011,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Airports Advisory Committee,2024-09-03
+rel-131,mayor-001,city-board-012,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Audit Committee,2024-09-03
+rel-132,mayor-001,city-board-013,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Balboa Park Committee,2024-09-03
+rel-133,mayor-001,city-board-014,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Board of Building Appeals and Advisors,2024-09-03
+rel-134,mayor-001,city-board-015,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Citizens Equal Opportunity Commission,2024-09-03
+rel-135,mayor-001,city-board-016,oversees,hierarchical,San Diego Municipal Code,Mayor oversees Climate Advisory Board,2024-09-03
+rel-136,supervisor-001,county-board-001,oversees,hierarchical,County Planning Regulations,Board of Supervisors oversees Planning Commission,2024-09-03
+rel-137,supervisor-001,county-board-002,oversees,hierarchical,County Ordinance,Board of Supervisors oversees Citizens Law Enforcement Review Board,2024-09-03
+rel-138,supervisor-001,county-board-003,oversees,hierarchical,Board Resolution May 19 2020,Board of Supervisors oversees Human Relations Commission,2024-09-03
+rel-139,supervisor-001,county-board-004,oversees,hierarchical,CSBG Act Requirements,Board of Supervisors oversees Community Action Board,2024-09-03
+rel-140,supervisor-001,county-board-005,oversees,hierarchical,State Mental Health Requirements,Board of Supervisors oversees Behavioral Health Advisory Board,2024-09-03
+rel-141,supervisor-001,county-board-006,oversees,hierarchical,Proposition 10 Implementation,Board of Supervisors oversees First 5 Commission,2024-09-03
+rel-142,supervisor-001,county-board-007,oversees,hierarchical,State Property Tax Law,Board of Supervisors oversees Property Tax Assessment Appeals Board,2024-09-03
+app-001,mayor-001,city-board-001,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 7 members to Planning Commission with City Council confirmation,2025-01-01
+app-002,mayor-001,city-board-002,appoints_members,appointment,San Diego Municipal Code Chapter II Article 6 Division 4,Mayor appoints 7 members to Ethics Commission from nominees with City Council confirmation,2025-01-01
+app-003,mayor-001,city-board-003,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 5 members to Civil Service Commission with City Council approval,2025-01-01
+app-004,mayor-001,city-board-004,appoints_members,appointment,San Diego Municipal Code Chapter IX Article 8,Mayor appoints 7 members to Housing Commission Board with City Council confirmation,2025-01-01
+app-005,mayor-001,city-board-005,appoints_members,appointment,San Diego Municipal Code Section 111.0206,Mayor appoints 7 members to Historical Resources Board with City Council confirmation,2025-01-01
+app-006,mayor-001,city-board-006,appoints_members,appointment,San Diego Municipal Code Section 26.30,Mayor appoints 11 members to Parks and Recreation Board with City Council confirmation,2025-01-01
+app-007,mayor-001,city-board-007,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 8 members to Board of Library Commissioners with City Council confirmation,2025-01-01
+app-008,council-001,city-board-008,appoints_members,appointment,City Charter Section 41.2 - Measure B,City Council appoints 25 members to Commission on Police Practices after application process,2025-01-01
+app-009,mayor-001,city-board-009,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 7 members to Commission for Arts and Culture with City Council confirmation,2025-01-01
+app-010,mayor-001,city-board-010,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 7 members to Accessibility Advisory Board with City Council confirmation,2025-01-01
+app-011,mayor-001,city-board-011,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 7 members to Airports Advisory Committee with City Council confirmation,2025-01-01
+app-012,mayor-001,city-board-012,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 5 members to Audit Committee with City Council confirmation,2025-01-01
+app-013,mayor-001,city-board-013,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 9 members to Balboa Park Committee with City Council confirmation,2025-01-01
+app-014,mayor-001,city-board-014,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 7 members to Board of Building Appeals and Advisors with City Council confirmation,2025-01-01
+app-015,mayor-001,city-board-015,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 9 members to Citizens Equal Opportunity Commission with City Council confirmation,2025-01-01
+app-016,mayor-001,city-board-016,appoints_members,appointment,San Diego Municipal Code,Mayor appoints 11 members to Climate Advisory Board with City Council confirmation,2025-01-01
+app-017,supervisor-001,county-board-001,appoints_members,appointment,County Planning Regulations,Board of Supervisors appoints 6 members to Planning Commission by district,2025-01-01
+app-018,supervisor-001,county-board-002,appoints_members,appointment,County Ordinance,Board of Supervisors appoints 11 members to Citizens Law Enforcement Review Board,2025-01-01
+app-019,supervisor-001,county-board-003,appoints_members,appointment,Board Resolution May 19 2020,Board of Supervisors appoints 31 members to Human Relations Commission,2025-01-01
+app-020,supervisor-001,county-board-004,appoints_members,appointment,CSBG Act Requirements,Board of Supervisors confirms 15 members to Community Action Board,2025-01-01
+app-021,supervisor-001,county-board-005,appoints_members,appointment,State Mental Health Requirements,Board of Supervisors appoints 20 members to Behavioral Health Advisory Board,2025-01-01
+app-022,supervisor-001,county-board-006,appoints_members,appointment,Proposition 10 Implementation,Board of Supervisors appoints 5 members to First 5 Commission,2025-01-01
+app-023,supervisor-001,county-board-007,appoints_members,appointment,State Property Tax Law,Board of Supervisors appoints 7 members to Property Tax Assessment Appeals Board,2025-01-01
+app-024,mayor-001,city-dept-001,appoints_department_head,appointment,San Diego City Charter,Mayor appoints City Auditor as independent office,2025-01-01
+app-025,mayor-001,city-dept-002,appoints_department_head,appointment,San Diego City Charter,Mayor appoints City Clerk,2025-01-01
+app-026,mayor-001,city-dept-003,appoints_department_head,appointment,San Diego City Charter,Mayor appoints City Planning Director with Council confirmation,2025-01-01
+app-027,mayor-001,city-dept-004,appoints_department_head,appointment,San Diego City Charter,Mayor appoints City Treasurer,2025-01-01
+app-028,mayor-001,city-dept-008,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Development Services Director with Council confirmation,2025-01-01
+app-029,mayor-001,city-dept-010,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Economic Development Director with Council confirmation,2025-01-01
+app-030,mayor-001,city-dept-016,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Engineering & Capital Projects Director with Council confirmation,2025-01-01
+app-031,mayor-001,city-dept-019,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Environmental Services Director with Council confirmation,2025-01-01
+app-032,mayor-001,city-dept-020,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Finance Director with Council confirmation,2025-01-01
+app-033,mayor-001,city-dept-022,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Fire-Rescue Chief with Council confirmation,2025-01-01
+app-034,mayor-001,city-dept-024,appoints_department_head,appointment,San Diego City Charter,Mayor appoints General Services Director with Council confirmation,2025-01-01
+app-035,mayor-001,city-dept-029,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Human Resources Director with Council confirmation,2025-01-01
+app-036,mayor-001,city-dept-032,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Information Technology Director with Council confirmation,2025-01-01
+app-037,mayor-001,city-dept-033,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Library Director with Council confirmation,2025-01-01
+app-038,mayor-001,city-dept-035,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Parks & Recreation Director with Council confirmation,2025-01-01
+app-039,mayor-001,city-dept-037,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Personnel Director with Council confirmation,2025-01-01
+app-040,mayor-001,city-dept-038,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Police Chief with Council confirmation,2025-01-01
+app-041,mayor-001,city-dept-039,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Public Utilities Director with Council confirmation,2025-01-01
+app-042,mayor-001,city-dept-041,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Purchasing & Contracts Director with Council confirmation,2025-01-01
+app-043,mayor-001,city-dept-043,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Risk Management Director with Council confirmation,2025-01-01
+app-044,mayor-001,city-dept-046,appoints_department_head,appointment,San Diego City Charter,Mayor appoints Transportation Director with Council confirmation,2025-01-01
+app-045,supervisor-001,county-dept-007,appoints_department_head,appointment,County Charter,Board of Supervisors appoints Chief Administrative Officer,2025-01-01
+app-046,supervisor-001,county-dept-001,appoints_department_head,appointment,County Code,Board of Supervisors appoints Agriculture Weights and Measures Director,2025-01-01
+app-047,supervisor-001,county-dept-002,appoints_department_head,appointment,County Code,Board of Supervisors appoints Aging & Independence Services Director,2025-01-01
+app-048,supervisor-001,county-dept-003,appoints_department_head,appointment,County Code,Board of Supervisors appoints Animal Services Director,2025-01-01
+app-049,supervisor-001,county-dept-004,appoints_department_head,appointment,County Charter,Board of Supervisors appoints Assessor/Recorder/County Clerk,2025-01-01
+app-050,supervisor-001,county-dept-005,appoints_department_head,appointment,County Charter,Board of Supervisors appoints Auditor and Controller,2025-01-01
+app-051,supervisor-001,county-dept-006,appoints_department_head,appointment,County Code,Board of Supervisors appoints Behavioral Health Services Director,2025-01-01
+app-052,supervisor-001,county-dept-008,appoints_department_head,appointment,County Code,Board of Supervisors appoints Child and Family Well-Being Director,2025-01-01
+app-053,supervisor-001,county-dept-014,appoints_department_head,appointment,County Charter,Board of Supervisors appoints County Counsel,2025-01-01
+app-054,supervisor-001,county-dept-018,appoints_department_head,appointment,County Code,Board of Supervisors appoints Environmental Health and Quality Director,2025-01-01
+app-055,supervisor-001,county-dept-023,appoints_department_head,appointment,County Code,Board of Supervisors appoints County Fire Chief,2025-01-01
+app-056,supervisor-001,county-dept-026,appoints_department_head,appointment,County Code,Board of Supervisors appoints Health & Human Services Agency Director,2025-01-01
+app-057,supervisor-001,county-dept-027,appoints_department_head,appointment,County Code,Board of Supervisors appoints Housing and Community Development Director,2025-01-01
+app-058,supervisor-001,county-dept-031,appoints_department_head,appointment,County Code,Board of Supervisors appoints Library Director,2025-01-01
+app-059,supervisor-001,county-dept-032,appoints_department_head,appointment,County Code,Board of Supervisors appoints Medical Care Services Director,2025-01-01
+app-060,supervisor-001,county-dept-033,appoints_department_head,appointment,County Code,Board of Supervisors appoints Medical Examiner,2025-01-01
+app-061,supervisor-001,county-dept-034,appoints_department_head,appointment,County Code,Board of Supervisors appoints Parks and Recreation Director,2025-01-01
+app-062,supervisor-001,county-dept-036,appoints_department_head,appointment,California Penal Code,Board of Supervisors appoints Probation Chief,2025-01-01
+app-063,supervisor-001,county-dept-042,appoints_department_head,appointment,California Elections Code,Board of Supervisors appoints Registrar of Voters,2025-01-01
+app-064,supervisor-001,county-dept-046,appoints_department_head,appointment,County Charter,Board of Supervisors appoints Treasurer-Tax Collector,2025-01-01
+app-065,mayor-001,sandag-001,appoints_board_representative,appointment,Regional Authority Governance,City of San Diego appoints 2 representatives to SANDAG Board,2025-01-01
+app-066,supervisor-001,sandag-001,appoints_board_representative,appointment,Regional Authority Governance,County of San Diego appoints 2 representatives to SANDAG Board,2025-01-01
+app-067,mayor-001,mts-001,appoints_board_representative,appointment,Regional Authority Governance,City of San Diego appoints 4 representatives to MTS Board,2025-01-01
+app-068,supervisor-001,mts-001,appoints_board_representative,appointment,Regional Authority Governance,County of San Diego appoints 1 representative to MTS Board,2025-01-01
+app-069,mayor-001,airport-001,appoints_board_representative,appointment,California Assembly Bill 93,Mayor of San Diego appoints representatives to Airport Authority Board with Council confirmation,2025-01-01
+app-070,supervisor-001,airport-001,appoints_board_representative,appointment,California Assembly Bill 93,County supervisors appoint representatives to Airport Authority Board,2025-01-01
+app-071,mayor-001,port-001,appoints_board_representative,appointment,California Senate Bill 41,City of San Diego appoints 3 commissioners to Port District Board,2025-01-01
+app-072,mayor-001,water-001,appoints_board_representative,appointment,California State Legislature,City of San Diego appoints Water Authority representatives with Council confirmation,2025-01-01
+app-073,sandag-001,sandag-002,appoints_committee_members,appointment,Regional Authority Governance,SANDAG Board appoints 6 members to Executive Committee,2025-01-01
+app-074,sandag-001,sandag-003,appoints_committee_members,appointment,Regional Authority Governance,SANDAG Board appoints members to Transportation Committee,2025-01-01
+app-075,sandag-001,sandag-004,appoints_committee_members,appointment,Regional Authority Governance,SANDAG Board appoints members to Regional Planning Committee,2025-01-01
+app-076,sandag-001,sandag-005,appoints_committee_members,appointment,Regional Authority Governance,SANDAG Board appoints members to Audit Committee,2025-01-01
+app-077,sandag-001,sandag-006,appoints_committee_members,appointment,Regional Authority Governance,SANDAG Board appoints members to Borders Committee,2025-01-01
+app-078,sandag-001,sandag-007,appoints_committee_members,appointment,Regional Authority Governance,SANDAG Board appoints members to Public Safety Committee,2025-01-01
+app-079,mts-001,mts-002,appoints_committee_members,appointment,Regional Authority Governance,MTS Board appoints members to Joint Audit Oversight Budget Development and Executive Committee,2025-01-01
+app-080,mts-001,mts-003,appoints_committee_members,appointment,Regional Authority Governance,MTS Board appoints community members to Accessible Services Advisory Committee,2025-01-01
+app-081,mts-001,mts-004,appoints_committee_members,appointment,Regional Authority Governance,MTS Board appoints members to Public Security Committee,2025-01-01
+app-082,mts-001,mts-005,appoints_committee_members,appointment,Regional Authority Governance,MTS Board appoints industry and public representatives to Taxicab Advisory Committee,2025-01-01
+app-083,airport-001,airport-002,appoints_committee_members,appointment,Regional Authority Governance,Airport Authority Board appoints members to Planning Committee,2025-01-01
+app-084,airport-001,airport-003,appoints_committee_members,appointment,Regional Authority Governance,Airport Authority Board appoints 3 members to Executive Committee,2025-01-01
+app-085,airport-001,airport-004,appoints_committee_members,appointment,Regional Authority Governance,Airport Authority Board appoints members to Oversight Committee,2025-01-01
+app-086,airport-001,airport-005,appoints_committee_members,appointment,Regional Authority Governance,Airport Authority Board appoints community members to Art Advisory Committee,2025-01-01
+app-087,port-001,port-002,appoints_committee_members,appointment,Regional Authority Governance,Port Board appoints community members to Environmental Advisory Committee,2025-01-01
+app-088,water-001,water-002,appoints_committee_members,appointment,Regional Authority Governance,Water Authority Board appoints members to Administrative and Finance Committee,2025-01-01
+app-089,water-001,water-003,appoints_committee_members,appointment,Regional Authority Governance,Water Authority Board appoints members to Engineering and Operations Committee,2025-01-01
+app-090,water-001,water-004,appoints_committee_members,appointment,Regional Authority Governance,Water Authority Board appoints members to Imported Water Committee,2025-01-01
+app-091,water-001,water-005,appoints_committee_members,appointment,Regional Authority Governance,Water Authority Board appoints members to Legislation & Public Outreach Committee,2025-01-01
+app-092,water-001,water-006,appoints_committee_members,appointment,Regional Authority Governance,Water Authority Board appoints members to Water Planning and Environmental Committee,2025-01-01
+app-093,council-001,city-dept-030,appoints_department_head,appointment,San Diego City Charter,City Council appoints Independent Budget Analyst,2025-01-01
+app-094,council-001,sandag-001,confirms_appointments,appointment,Regional Authority Governance,Other member cities appoint one representative each to SANDAG Board,2025-01-01
+app-095,council-001,mts-001,confirms_appointments,appointment,Regional Authority Governance,Other member cities appoint representatives to MTS Board,2025-01-01
+app-096,council-001,port-001,confirms_appointments,appointment,California Senate Bill 41,Chula Vista appoints 1 commissioner to Port District Board,2025-01-01
+app-097,council-001,port-001,confirms_appointments,appointment,California Senate Bill 41,Coronado appoints 1 commissioner to Port District Board,2025-01-01
+app-098,council-001,port-001,confirms_appointments,appointment,California Senate Bill 41,Imperial Beach appoints 1 commissioner to Port District Board,2025-01-01
+app-099,council-001,port-001,confirms_appointments,appointment,California Senate Bill 41,National City appoints 1 commissioner to Port District Board,2025-01-01
+app-100,council-001,nctd-001,confirms_appointments,appointment,Regional Authority Governance,North County cities appoint representatives to NCTD Board,2025-01-01
+app-101,supervisor-001,nctd-001,appoints_board_representative,appointment,Regional Authority Governance,5th District County Supervisor serves on NCTD Board,2025-01-01
+app-102,council-001,lafco-001,appoints_board_representative,appointment,Regional Authority Governance,Cities appoint representatives to San Diego LAFCO Commission,2025-01-01
+app-103,supervisor-001,lafco-001,appoints_board_representative,appointment,Regional Authority Governance,County supervisors appoint representatives to San Diego LAFCO Commission,2025-01-01
+app-104,council-001,lafco-001,appoints_board_representative,appointment,Regional Authority Governance,Special districts appoint representatives to San Diego LAFCO Commission,2025-01-01
+app-105,council-001,lafco-001,appoints_board_representative,appointment,Regional Authority Governance,Public members appointed to San Diego LAFCO Commission,2025-01-01
+app-106,lafco-001,lafco-002,appoints_committee_members,appointment,Regional Authority Governance,San Diego LAFCO Commission appoints special district representatives to Advisory Committee,2025-01-01

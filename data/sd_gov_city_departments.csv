@@ -1,0 +1,48 @@
+id,name,type,parent_entity,website_url,description,budget,staff_count,creation_date,legal_source,last_verified
+city-dept-001,City Auditor,Independent Office,Mayor,https://www.sandiego.gov/auditor,Independent audit and oversight functions,,,,San Diego City Charter,2024-09-03
+city-dept-002,City Clerk,Administrative Office,Mayor,https://www.sandiego.gov/city-clerk,Records management and election administration,,,,San Diego City Charter,2024-09-03
+city-dept-003,City Planning,Department,Mayor,https://www.sandiego.gov/planning,Long-range planning and community development,,,,San Diego City Charter,2024-09-03
+city-dept-004,City Treasurer,Department,Mayor,https://www.sandiego.gov/treasurer,Financial management and investment oversight,,,,San Diego City Charter,2024-09-03
+city-dept-005,Parking Administration,Division,City Treasurer,https://www.sandiego.gov/parking,Parking enforcement and management,,,,San Diego Municipal Code,2024-09-03
+city-dept-006,Communication,Department,Mayor,https://www.sandiego.gov/communications,Public communications and media relations,,,,San Diego Municipal Code,2024-09-03
+city-dept-007,Compliance,Office,Mayor,https://www.sandiego.gov/compliance,Regulatory compliance and oversight,,,,San Diego Municipal Code,2024-09-03
+city-dept-008,Development Services,Department,Mayor,https://www.sandiego.gov/development-services,Building permits and land development review,,,,San Diego City Charter,2024-09-03
+city-dept-009,Building & Land Use Enforcement,Division,Development Services,https://www.sandiego.gov/development-services,Code enforcement and building inspection,,,,San Diego Municipal Code,2024-09-03
+city-dept-010,Economic Development,Department,Mayor,https://www.sandiego.gov/economic-development,Business development and economic growth,,,,San Diego City Charter,2024-09-03
+city-dept-011,Airports,Division,Economic Development,https://www.san.org,Airport management and operations,,,,San Diego Municipal Code,2024-09-03
+city-dept-012,Community Development Block Grant,Division,Economic Development,https://www.sandiego.gov/cdbg,Federal community development programs,,,,Federal Programs,2024-09-03
+city-dept-013,Cultural Affairs,Division,Economic Development,https://www.sandiego.gov/arts-culture,Arts and cultural program administration,,,,San Diego Municipal Code,2024-09-03
+city-dept-014,Real Estate,Division,Economic Development,https://www.sandiego.gov/real-estate,City property management and development,,,,San Diego Municipal Code,2024-09-03
+city-dept-015,Office of Emergency Services,Office,Mayor,https://www.sandiego.gov/emergency,Emergency preparedness and response coordination,,,,San Diego Municipal Code,2024-09-03
+city-dept-016,Engineering & Capital Projects,Department,Mayor,https://www.sandiego.gov/engineering,Infrastructure design and capital project management,,,,San Diego City Charter,2024-09-03
+city-dept-017,ADA Compliance and Accessibility,Division,Engineering & Capital Projects,https://www.sandiego.gov/ada,Americans with Disabilities Act compliance,,,,Federal Law,2024-09-03
+city-dept-018,Engineering Branch,Division,Engineering & Capital Projects,https://www.sandiego.gov/engineering,Civil engineering and infrastructure design,,,,San Diego Municipal Code,2024-09-03
+city-dept-019,Environmental Services,Department,Mayor,https://www.sandiego.gov/environmental-services,Waste management and environmental programs,,,,San Diego City Charter,2024-09-03
+city-dept-020,Finance,Department,Mayor,https://www.sandiego.gov/finance,Financial planning and budget management,,,,San Diego City Charter,2024-09-03
+city-dept-021,Debt Management,Division,Finance,https://www.sandiego.gov/finance,Municipal debt and bond administration,,,,San Diego Municipal Code,2024-09-03
+city-dept-022,Fire-Rescue,Department,Mayor,https://www.sandiego.gov/fire,Fire suppression and emergency medical services,,,,San Diego City Charter,2024-09-03
+city-dept-023,Lifeguard Services,Division,Fire-Rescue,https://www.sandiego.gov/lifeguards,Beach and water safety services,,,,San Diego Municipal Code,2024-09-03
+city-dept-024,General Services,Department,Mayor,https://www.sandiego.gov/general-services,Facilities and fleet management,,,,San Diego City Charter,2024-09-03
+city-dept-025,Facilities Services,Division,General Services,https://www.sandiego.gov/facilities,City facility maintenance and management,,,,San Diego Municipal Code,2024-09-03
+city-dept-026,Fleet Operations,Division,General Services,https://www.sandiego.gov/fleet,City vehicle fleet management,,,,San Diego Municipal Code,2024-09-03
+city-dept-027,Government Affairs,Office,Mayor,https://www.sandiego.gov/government-affairs,Intergovernmental relations and policy coordination,,,,San Diego Municipal Code,2024-09-03
+city-dept-028,Homelessness Strategies and Solutions,Department,Mayor,https://www.sandiego.gov/homelessness,Homelessness response and housing services,,,,San Diego Municipal Code,2024-09-03
+city-dept-029,Human Resources,Department,Mayor,https://www.sandiego.gov/human-resources,Personnel management and employee services,,,,San Diego City Charter,2024-09-03
+city-dept-030,Independent Budget Analyst,Independent Office,City Council,https://www.sandiego.gov/iba,Independent budget analysis for City Council,,,,San Diego City Charter,2024-09-03
+city-dept-031,Race and Equity,Division,Independent Budget Analyst,https://www.sandiego.gov/race-equity,Equity analysis and policy review,,,,San Diego Municipal Code,2024-09-03
+city-dept-032,Information Technology,Department,Mayor,https://www.sandiego.gov/it,Technology services and digital infrastructure,,,,San Diego City Charter,2024-09-03
+city-dept-033,Library,Department,Mayor,https://www.sandiego.gov/public-library,Public library services and programs,,,,San Diego City Charter,2024-09-03
+city-dept-034,Child and Youth Success,Division,Library,https://www.sandiego.gov/library,Youth development and educational programs,,,,San Diego Municipal Code,2024-09-03
+city-dept-035,Parks & Recreation,Department,Mayor,https://www.sandiego.gov/parks-recreation,Parks maintenance and recreational programs,,,,San Diego City Charter,2024-09-03
+city-dept-036,Performance & Analytics,Office,Mayor,https://www.sandiego.gov/performance,Performance management and data analytics,,,,San Diego Municipal Code,2024-09-03
+city-dept-037,Personnel,Department,Mayor,https://www.sandiego.gov/personnel,Employee relations and personnel administration,,,,San Diego City Charter,2024-09-03
+city-dept-038,Police,Department,Mayor,https://www.sandiego.gov/police,Law enforcement and public safety,,,,San Diego City Charter,2024-09-03
+city-dept-039,Public Utilities,Department,Mayor,https://www.sandiego.gov/public-utilities,Water and wastewater services,,,,San Diego City Charter,2024-09-03
+city-dept-040,Reservoir Lakes,Division,Public Utilities,https://www.sandiego.gov/reservoirs,City reservoir management and maintenance,,,,San Diego Municipal Code,2024-09-03
+city-dept-041,Purchasing & Contracts,Department,Mayor,https://www.sandiego.gov/purchasing,Procurement and contract administration,,,,San Diego City Charter,2024-09-03
+city-dept-042,Equal Opportunity Contracts,Division,Purchasing & Contracts,https://www.sandiego.gov/eoc,Minority and small business contracting programs,,,,San Diego Municipal Code,2024-09-03
+city-dept-043,Risk Management,Department,Mayor,https://www.sandiego.gov/risk-management,Insurance and liability management,,,,San Diego City Charter,2024-09-03
+city-dept-044,Special Events & Filming,Department,Mayor,https://www.sandiego.gov/special-events,Event permitting and film location services,,,,San Diego Municipal Code,2024-09-03
+city-dept-045,Stormwater,Department,Mayor,https://www.sandiego.gov/stormwater,Stormwater management and watershed protection,,,,San Diego Municipal Code,2024-09-03
+city-dept-046,Transportation,Department,Mayor,https://www.sandiego.gov/transportation,Transportation planning and traffic management,,,,San Diego City Charter,2024-09-03
+city-dept-047,Street Division,Division,Transportation,https://www.sandiego.gov/streets,Street maintenance and traffic operations,,,,San Diego Municipal Code,2024-09-03

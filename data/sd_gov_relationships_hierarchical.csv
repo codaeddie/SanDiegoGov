@@ -1,0 +1,143 @@
+relationship_id,parent_id,child_id,relationship_type,authority_source,description,last_verified
+rel-001,mayor-001,city-dept-001,oversees,San Diego City Charter,Mayor oversees City Auditor independent office,2024-09-03
+rel-002,mayor-001,city-dept-002,oversees,San Diego City Charter,Mayor oversees City Clerk administrative office,2024-09-03
+rel-003,mayor-001,city-dept-003,oversees,San Diego City Charter,Mayor oversees City Planning Department,2024-09-03
+rel-004,mayor-001,city-dept-004,oversees,San Diego City Charter,Mayor oversees City Treasurer Department,2024-09-03
+rel-005,city-dept-004,city-dept-005,reports_to,San Diego Municipal Code,Parking Administration Division reports to City Treasurer,2024-09-03
+rel-006,mayor-001,city-dept-006,oversees,San Diego Municipal Code,Mayor oversees Communication Department,2024-09-03
+rel-007,mayor-001,city-dept-007,oversees,San Diego Municipal Code,Mayor oversees Compliance Office,2024-09-03
+rel-008,mayor-001,city-dept-008,oversees,San Diego City Charter,Mayor oversees Development Services Department,2024-09-03
+rel-009,city-dept-008,city-dept-009,reports_to,San Diego Municipal Code,Building & Land Use Enforcement Division reports to Development Services,2024-09-03
+rel-010,mayor-001,city-dept-010,oversees,San Diego City Charter,Mayor oversees Economic Development Department,2024-09-03
+rel-011,city-dept-010,city-dept-011,reports_to,San Diego Municipal Code,Airports Division reports to Economic Development,2024-09-03
+rel-012,city-dept-010,city-dept-012,reports_to,Federal Programs,Community Development Block Grant Division reports to Economic Development,2024-09-03
+rel-013,city-dept-010,city-dept-013,reports_to,San Diego Municipal Code,Cultural Affairs Division reports to Economic Development,2024-09-03
+rel-014,city-dept-010,city-dept-014,reports_to,San Diego Municipal Code,Real Estate Division reports to Economic Development,2024-09-03
+rel-015,mayor-001,city-dept-015,oversees,San Diego Municipal Code,Mayor oversees Office of Emergency Services,2024-09-03
+rel-016,mayor-001,city-dept-016,oversees,San Diego City Charter,Mayor oversees Engineering & Capital Projects Department,2024-09-03
+rel-017,city-dept-016,city-dept-017,reports_to,Federal Law,ADA Compliance and Accessibility Division reports to Engineering & Capital Projects,2024-09-03
+rel-018,city-dept-016,city-dept-018,reports_to,San Diego Municipal Code,Engineering Branch Division reports to Engineering & Capital Projects,2024-09-03
+rel-019,mayor-001,city-dept-019,oversees,San Diego City Charter,Mayor oversees Environmental Services Department,2024-09-03
+rel-020,mayor-001,city-dept-020,oversees,San Diego City Charter,Mayor oversees Finance Department,2024-09-03
+rel-021,city-dept-020,city-dept-021,reports_to,San Diego Municipal Code,Debt Management Division reports to Finance Department,2024-09-03
+rel-022,mayor-001,city-dept-022,oversees,San Diego City Charter,Mayor oversees Fire-Rescue Department,2024-09-03
+rel-023,city-dept-022,city-dept-023,reports_to,San Diego Municipal Code,Lifeguard Services Division reports to Fire-Rescue,2024-09-03
+rel-024,mayor-001,city-dept-024,oversees,San Diego City Charter,Mayor oversees General Services Department,2024-09-03
+rel-025,city-dept-024,city-dept-025,reports_to,San Diego Municipal Code,Facilities Services Division reports to General Services,2024-09-03
+rel-026,city-dept-024,city-dept-026,reports_to,San Diego Municipal Code,Fleet Operations Division reports to General Services,2024-09-03
+rel-027,mayor-001,city-dept-027,oversees,San Diego Municipal Code,Mayor oversees Government Affairs Office,2024-09-03
+rel-028,mayor-001,city-dept-028,oversees,San Diego Municipal Code,Mayor oversees Homelessness Strategies and Solutions Department,2024-09-03
+rel-029,mayor-001,city-dept-029,oversees,San Diego City Charter,Mayor oversees Human Resources Department,2024-09-03
+rel-030,council-001,city-dept-030,oversees,San Diego City Charter,City Council oversees Independent Budget Analyst office,2024-09-03
+rel-031,city-dept-030,city-dept-031,reports_to,San Diego Municipal Code,Race and Equity Division reports to Independent Budget Analyst,2024-09-03
+rel-032,mayor-001,city-dept-032,oversees,San Diego City Charter,Mayor oversees Information Technology Department,2024-09-03
+rel-033,mayor-001,city-dept-033,oversees,San Diego City Charter,Mayor oversees Library Department,2024-09-03
+rel-034,city-dept-033,city-dept-034,reports_to,San Diego Municipal Code,Child and Youth Success Division reports to Library,2024-09-03
+rel-035,mayor-001,city-dept-035,oversees,San Diego City Charter,Mayor oversees Parks & Recreation Department,2024-09-03
+rel-036,mayor-001,city-dept-036,oversees,San Diego Municipal Code,Mayor oversees Performance & Analytics Office,2024-09-03
+rel-037,mayor-001,city-dept-037,oversees,San Diego City Charter,Mayor oversees Personnel Department,2024-09-03
+rel-038,mayor-001,city-dept-038,oversees,San Diego City Charter,Mayor oversees Police Department,2024-09-03
+rel-039,mayor-001,city-dept-039,oversees,San Diego City Charter,Mayor oversees Public Utilities Department,2024-09-03
+rel-040,city-dept-039,city-dept-040,reports_to,San Diego Municipal Code,Reservoir Lakes Division reports to Public Utilities,2024-09-03
+rel-041,mayor-001,city-dept-041,oversees,San Diego City Charter,Mayor oversees Purchasing & Contracts Department,2024-09-03
+rel-042,city-dept-041,city-dept-042,reports_to,San Diego Municipal Code,Equal Opportunity Contracts Division reports to Purchasing & Contracts,2024-09-03
+rel-043,mayor-001,city-dept-043,oversees,San Diego City Charter,Mayor oversees Risk Management Department,2024-09-03
+rel-044,mayor-001,city-dept-044,oversees,San Diego Municipal Code,Mayor oversees Special Events & Filming Department,2024-09-03
+rel-045,mayor-001,city-dept-045,oversees,San Diego Municipal Code,Mayor oversees Stormwater Department,2024-09-03
+rel-046,mayor-001,city-dept-046,oversees,San Diego City Charter,Mayor oversees Transportation Department,2024-09-03
+rel-047,city-dept-046,city-dept-047,reports_to,San Diego Municipal Code,Street Division reports to Transportation Department,2024-09-03
+rel-048,supervisor-001,county-dept-001,oversees,County Code,Board of Supervisors oversees Agriculture Weights and Measures Department,2024-09-03
+rel-049,supervisor-001,county-dept-002,oversees,County Code,Board of Supervisors oversees Aging & Independence Services Department,2024-09-03
+rel-050,supervisor-001,county-dept-003,oversees,County Code,Board of Supervisors oversees Animal Services Department,2024-09-03
+rel-051,supervisor-001,county-dept-004,oversees,County Charter,Board of Supervisors oversees Assessor/Recorder/County Clerk Department,2024-09-03
+rel-052,supervisor-001,county-dept-005,oversees,County Charter,Board of Supervisors oversees Auditor and Controller Department,2024-09-03
+rel-053,supervisor-001,county-dept-006,oversees,County Code,Board of Supervisors oversees Behavioral Health Services Department,2024-09-03
+rel-054,supervisor-001,county-dept-007,oversees,County Charter,Board of Supervisors oversees Chief Administrative Office,2024-09-03
+rel-055,supervisor-001,county-dept-008,oversees,County Code,Board of Supervisors oversees Child and Family Well-Being Department,2024-09-03
+rel-056,supervisor-001,county-dept-009,oversees,State/Federal Programs,Board of Supervisors oversees Child Support Services Department,2024-09-03
+rel-057,supervisor-001,county-dept-010,oversees,County Ordinance,Board of Supervisors oversees Citizens Law Enforcement Review Board,2024-09-03
+rel-058,supervisor-001,county-dept-011,oversees,County Charter,Board of Supervisors oversees Civil Service Commission,2024-09-03
+rel-059,supervisor-001,county-dept-012,oversees,County Charter,Board of Supervisors oversees Clerk of the Board of Supervisors Office,2024-09-03
+rel-060,county-dept-007,county-dept-013,reports_to,County Code,Communications Office reports to Chief Administrative Office,2024-09-03
+rel-061,supervisor-001,county-dept-014,oversees,County Charter,Board of Supervisors oversees County Counsel Department,2024-09-03
+rel-062,county-dept-007,county-dept-016,reports_to,County Code,Economic Development and Government Affairs reports to Chief Administrative Office,2024-09-03
+rel-063,county-dept-007,county-dept-017,reports_to,County Code,Emergency Services Office reports to Chief Administrative Office,2024-09-03
+rel-064,supervisor-001,county-dept-018,oversees,County Code,Board of Supervisors oversees Environmental Health and Quality Department,2024-09-03
+rel-065,county-dept-007,county-dept-019,reports_to,County Resolution,Equity and Racial Justice Office reports to Chief Administrative Office,2024-09-03
+rel-066,county-dept-007,county-dept-020,reports_to,County Ordinance,Ethics and Compliance Office reports to Chief Administrative Office,2024-09-03
+rel-067,county-dept-007,county-dept-021,reports_to,County Code,Evaluation Performance and Analytics Office reports to Chief Administrative Office,2024-09-03
+rel-068,county-dept-007,county-dept-022,reports_to,County Code,Finance and General Government Group reports to Chief Administrative Office,2024-09-03
+rel-069,supervisor-001,county-dept-023,oversees,County Code,Board of Supervisors oversees County Fire Department,2024-09-03
+rel-070,county-dept-007,county-dept-024,reports_to,County Code,General Services Department reports to Chief Administrative Office,2024-09-03
+rel-071,supervisor-001,county-dept-026,oversees,County Code,Board of Supervisors oversees Health & Human Services Agency,2024-09-03
+rel-072,supervisor-001,county-dept-027,oversees,County Code,Board of Supervisors oversees Housing and Community Development Department,2024-09-03
+rel-073,county-dept-007,county-dept-028,reports_to,County Code,Human Resources Department reports to Chief Administrative Office,2024-09-03
+rel-074,county-dept-007,county-dept-029,reports_to,County Code,Labor Standards and Enforcement Office reports to Chief Administrative Office,2024-09-03
+rel-075,county-dept-007,county-dept-030,reports_to,County Code,Land Use and Environment Group reports to Chief Administrative Office,2024-09-03
+rel-076,supervisor-001,county-dept-031,oversees,County Code,Board of Supervisors oversees Library Department,2024-09-03
+rel-077,supervisor-001,county-dept-032,oversees,County Code,Board of Supervisors oversees Medical Care Services Department,2024-09-03
+rel-078,supervisor-001,county-dept-033,oversees,County Code,Board of Supervisors oversees Medical Examiner Office,2024-09-03
+rel-079,supervisor-001,county-dept-034,oversees,County Code,Board of Supervisors oversees Parks and Recreation Department,2024-09-03
+rel-080,county-dept-030,county-dept-035,reports_to,County Code,Planning & Development Services Department reports to Land Use and Environment Group,2024-09-03
+rel-081,supervisor-001,county-dept-036,oversees,California Penal Code,Board of Supervisors oversees Probation Department,2024-09-03
+rel-082,county-dept-026,county-dept-038,reports_to,California Health and Safety Code,Public Health Department reports to Health & Human Services Agency,2024-09-03
+rel-083,county-dept-007,county-dept-039,reports_to,County Code,Public Safety Group reports to Chief Administrative Office,2024-09-03
+rel-084,county-dept-030,county-dept-040,reports_to,County Code,Public Works Department reports to Land Use and Environment Group,2024-09-03
+rel-085,county-dept-022,county-dept-041,reports_to,County Code,Purchasing and Contracting Department reports to Finance and General Government Group,2024-09-03
+rel-086,supervisor-001,county-dept-042,oversees,California Elections Code,Board of Supervisors oversees Registrar of Voters Office,2024-09-03
+rel-087,county-dept-026,county-dept-043,reports_to,State/Federal Programs,Self-Sufficiency Services Department reports to Health & Human Services Agency,2024-09-03
+rel-088,county-dept-007,county-dept-045,reports_to,County Code,Technology Office reports to Chief Administrative Office,2024-09-03
+rel-089,supervisor-001,county-dept-046,oversees,County Charter,Board of Supervisors oversees Treasurer-Tax Collector Office,2024-09-03
+rel-090,regional-001,sandag-001,oversees,California Government Code,SANDAG as organization oversees SANDAG Board of Directors,2024-09-03
+rel-091,sandag-001,sandag-002,oversees,Regional Authority Governance,SANDAG Board oversees Executive Committee,2024-09-03
+rel-092,sandag-001,sandag-003,oversees,Regional Authority Governance,SANDAG Board oversees Transportation Committee,2024-09-03
+rel-093,sandag-001,sandag-004,oversees,Regional Authority Governance,SANDAG Board oversees Regional Planning Committee,2024-09-03
+rel-094,sandag-001,sandag-005,oversees,Regional Authority Governance,SANDAG Board oversees Audit Committee,2024-09-03
+rel-095,sandag-001,sandag-006,oversees,Regional Authority Governance,SANDAG Board oversees Borders Committee,2024-09-03
+rel-096,sandag-001,sandag-007,oversees,Regional Authority Governance,SANDAG Board oversees Public Safety Committee,2024-09-03
+rel-097,regional-002,mts-001,oversees,California Public Utilities Code,MTS as organization oversees MTS Board of Directors,2024-09-03
+rel-098,mts-001,mts-002,oversees,Regional Authority Governance,MTS Board oversees Joint Audit Oversight Budget Development and Executive Committee,2024-09-03
+rel-099,mts-001,mts-003,oversees,Regional Authority Governance,MTS Board oversees Accessible Services Advisory Committee,2024-09-03
+rel-100,mts-001,mts-004,oversees,Regional Authority Governance,MTS Board oversees Public Security Committee,2024-09-03
+rel-101,mts-001,mts-005,oversees,Regional Authority Governance,MTS Board oversees Taxicab Advisory Committee,2024-09-03
+rel-102,regional-003,nctd-001,oversees,California Senate Bill 802,NCTD as organization oversees NCTD Board of Directors,2024-09-03
+rel-103,nctd-001,nctd-002,oversees,Regional Authority Governance,NCTD Board oversees Performance Administration and Finance Committee,2024-09-03
+rel-104,nctd-001,nctd-003,oversees,Regional Authority Governance,NCTD Board oversees Marketing Service Planning and Business Development Committee,2024-09-03
+rel-105,nctd-001,nctd-004,oversees,Regional Authority Governance,NCTD Board oversees Executive Committee,2024-09-03
+rel-106,regional-004,airport-001,oversees,California Assembly Bill 93,San Diego Airport Authority as organization oversees Airport Authority Board,2024-09-03
+rel-107,airport-001,airport-002,oversees,Regional Authority Governance,Airport Authority Board oversees Planning Committee,2024-09-03
+rel-108,airport-001,airport-003,oversees,Regional Authority Governance,Airport Authority Board oversees Executive Committee,2024-09-03
+rel-109,airport-001,airport-004,oversees,Regional Authority Governance,Airport Authority Board oversees Oversight Committee,2024-09-03
+rel-110,airport-001,airport-005,oversees,Regional Authority Governance,Airport Authority Board oversees Art Advisory Committee,2024-09-03
+rel-111,regional-005,port-001,oversees,California Senate Bill 41,San Diego Unified Port District as organization oversees Port Board of Commissioners,2024-09-03
+rel-112,port-001,port-002,oversees,Regional Authority Governance,Port Board oversees Environmental Advisory Committee,2024-09-03
+rel-113,regional-006,water-001,oversees,California State Legislature,San Diego County Water Authority as organization oversees Water Authority Board,2024-09-03
+rel-114,water-001,water-002,oversees,Regional Authority Governance,Water Authority Board oversees Administrative and Finance Committee,2024-09-03
+rel-115,water-001,water-003,oversees,Regional Authority Governance,Water Authority Board oversees Engineering and Operations Committee,2024-09-03
+rel-116,water-001,water-004,oversees,Regional Authority Governance,Water Authority Board oversees Imported Water Committee,2024-09-03
+rel-117,water-001,water-005,oversees,Regional Authority Governance,Water Authority Board oversees Legislation & Public Outreach Committee,2024-09-03
+rel-118,water-001,water-006,oversees,Regional Authority Governance,Water Authority Board oversees Water Planning and Environmental Committee,2024-09-03
+rel-119,lafco-001,lafco-002,oversees,Regional Authority Governance,San Diego LAFCO Commission oversees Special Districts Advisory Committee,2024-09-03
+rel-120,mayor-001,city-board-001,oversees,San Diego Municipal Code,Mayor oversees Planning Commission,2024-09-03
+rel-121,mayor-001,city-board-002,oversees,San Diego Municipal Code Chapter II Article 6 Division 4,Mayor oversees Ethics Commission,2024-09-03
+rel-122,mayor-001,city-board-003,oversees,San Diego Municipal Code,Mayor oversees Civil Service Commission,2024-09-03
+rel-123,mayor-001,city-board-004,oversees,San Diego Municipal Code Chapter IX Article 8 Section 98.29,Mayor oversees Housing Commission Board,2024-09-03
+rel-124,mayor-001,city-board-005,oversees,San Diego Municipal Code Section 111.0206,Mayor oversees Historical Resources Board,2024-09-03
+rel-125,mayor-001,city-board-006,oversees,San Diego Municipal Code Section 26.30,Mayor oversees Parks and Recreation Board,2024-09-03
+rel-126,mayor-001,city-board-007,oversees,San Diego Municipal Code,Mayor oversees Board of Library Commissioners,2024-09-03
+rel-127,council-001,city-board-008,oversees,City Charter Section 41.2 - Measure B,City Council oversees Commission on Police Practices,2024-09-03
+rel-128,mayor-001,city-board-009,oversees,San Diego Municipal Code,Mayor oversees Commission for Arts and Culture,2024-09-03
+rel-129,mayor-001,city-board-010,oversees,San Diego Municipal Code,Mayor oversees Accessibility Advisory Board,2024-09-03
+rel-130,mayor-001,city-board-011,oversees,San Diego Municipal Code,Mayor oversees Airports Advisory Committee,2024-09-03
+rel-131,mayor-001,city-board-012,oversees,San Diego Municipal Code,Mayor oversees Audit Committee,2024-09-03
+rel-132,mayor-001,city-board-013,oversees,San Diego Municipal Code,Mayor oversees Balboa Park Committee,2024-09-03
+rel-133,mayor-001,city-board-014,oversees,San Diego Municipal Code,Mayor oversees Board of Building Appeals and Advisors,2024-09-03
+rel-134,mayor-001,city-board-015,oversees,San Diego Municipal Code,Mayor oversees Citizens Equal Opportunity Commission,2024-09-03
+rel-135,mayor-001,city-board-016,oversees,San Diego Municipal Code,Mayor oversees Climate Advisory Board,2024-09-03
+rel-136,supervisor-001,county-board-001,oversees,County Planning Regulations,Board of Supervisors oversees Planning Commission,2024-09-03
+rel-137,supervisor-001,county-board-002,oversees,County Ordinance,Board of Supervisors oversees Citizens Law Enforcement Review Board,2024-09-03
+rel-138,supervisor-001,county-board-003,oversees,Board Resolution May 19 2020,Board of Supervisors oversees Human Relations Commission,2024-09-03
+rel-139,supervisor-001,county-board-004,oversees,CSBG Act Requirements,Board of Supervisors oversees Community Action Board,2024-09-03
+rel-140,supervisor-001,county-board-005,oversees,State Mental Health Requirements,Board of Supervisors oversees Behavioral Health Advisory Board,2024-09-03
+rel-141,supervisor-001,county-board-006,oversees,Proposition 10 Implementation,Board of Supervisors oversees First 5 Commission,2024-09-03
+rel-142,supervisor-001,county-board-007,oversees,State Property Tax Law,Board of Supervisors oversees Property Tax Assessment Appeals Board,2024-09-03
