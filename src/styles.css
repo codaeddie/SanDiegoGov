@@ -38,6 +38,36 @@ h1 {
 .subtitle {
     font-size: 1.1rem;
     opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+/* View Navigation */
+.view-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.nav-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
 }
 
 /* Controls */

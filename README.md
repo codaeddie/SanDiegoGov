@@ -35,7 +35,8 @@ The San Diego Government Chart provides the first comprehensive, interactive map
    ```
 
 3. **Open your browser**:
-   Navigate to `http://localhost:8000`
+   - **Network View**: `http://localhost:8000` (Interactive force-directed graph)
+   - **Org Chart View**: `http://localhost:8000/orgchart.html` (Hierarchical tree structure)
 
 ### Alternative: Static File Server
 
@@ -75,31 +76,32 @@ data/
 └── sd_gov_boards_commissions.csv        # 54 boards and commissions
 ```
 
-## 🎨 Features
+## 🎨 Dual Visualization Features
 
-### Interactive Network Visualization
+### Network View (Interactive Graph)
 - **Force-directed graph** with 173 entities and 248 relationships
 - **Jurisdiction color-coding**: City (blue), County (green), Regional (orange)
 - **Relationship types**: Hierarchical (solid lines) and Appointment (dashed lines)
 - **Interactive exploration**: Click, drag, zoom, and search
-
-### Advanced Filtering
-- **Jurisdiction filters**: City, County, Regional
-- **Entity type filters**: Elected Officials, Departments, Boards
-- **Relationship filters**: Hierarchical, Appointment relationships
+- **Advanced filtering**: By jurisdiction, entity type, and relationship type
 - **Real-time search**: Find any entity by name
+- **Entity detail sidebar**: Complete information with relationship navigation
 
-### Entity Detail Pages
-- **Complete entity information**: Description, website, legal authority
-- **Relationship navigation**: Click through connected entities
-- **Authority chains**: Clear accountability pathways
-- **Source citations**: Legal basis for every relationship
+### Org Chart View (Hierarchical Tree) ⭐ NEW
+- **Hierarchical tree structure** showing clear command chains
+- **Current leadership names**: Actual people in positions (2024)
+- **Collapsible branches**: Manage complexity with expand/collapse
+- **Three-jurisdiction layout**: City, County, Regional authorities
+- **Interactive navigation**: Click to explore organizational structure
+- **Person-focused display**: Shows who actually runs each department
+- **Zoom and pan**: Navigate large organizational hierarchy
 
 ### San Diego-Specific Features
-- **Multi-jurisdictional display**: Handle complex regional governance
+- **Multi-jurisdictional complexity**: Handle regional governance federation
 - **SANDAG coordination**: Regional planning authority relationships
-- **Special district independence**: Port, Airport, Water authorities
+- **Leadership transparency**: Current department heads and officials named
 - **Cross-boundary appointments**: Regional representation mapping
+- **Authority chain visualization**: Follow complete accountability pathways
 
 ## 🏆 Compared to SF CivLab
 
@@ -139,9 +141,12 @@ SanDiegoGov/
 ├── docs/                    # Project documentation  
 ├── scripts/                 # Data processing and validation
 ├── src/                     # Web visualization source
-│   ├── index.html          # Main visualization page
-│   ├── styles.css          # Responsive CSS styling
+│   ├── index.html          # Network view (force-directed graph)
+│   ├── orgchart.html       # Org chart view (hierarchical tree) ⭐ NEW
+│   ├── styles.css          # Network view styling
+│   ├── orgchart-styles.css # Org chart styling ⭐ NEW
 │   ├── script.js           # D3.js network visualization
+│   ├── orgchart-script.js  # D3.js hierarchical tree ⭐ NEW
 │   ├── server.py           # Development HTTP server
 │   └── data/               # Symlink to ../data/
 ├── LICENSE                 # MIT License
@@ -171,22 +176,27 @@ SanDiegoGov/
 ## 🎯 Use Cases
 
 ### For Citizens
-- **"Who's in charge of..."** - Find responsible officials for any issue
-- **Government navigation** - Understand complex multi-jurisdictional structure
-- **Civic engagement** - Identify the right officials to contact
-- **Transparency** - See complete authority relationships and appointment processes
+- **"Who's in charge of..."** - Find responsible officials for any issue (both views)
+- **Government navigation** - Network view for relationships, Org chart for hierarchy
+- **Civic engagement** - Identify actual people to contact (org chart names)
+- **Authority understanding** - See who reports to whom in clear tree structure
 
 ### For Researchers
-- **Government structure analysis** - Complete dataset of regional governance
+- **Government structure analysis** - Dual perspectives: network relationships + hierarchy
 - **Authority relationship mapping** - 248 documented relationships with legal citations
+- **Leadership analysis** - Current department heads and officials identified
 - **Comparative studies** - Regional governance complexity analysis
-- **Public administration** - Case study in multi-jurisdictional coordination
 
 ### For Officials
-- **Interagency coordination** - Understand regional authority relationships
-- **Appointment reference** - Clear documentation of appointment authorities
-- **Legal basis verification** - Complete legal source citations
+- **Interagency coordination** - Network view shows cross-department relationships  
+- **Chain of command** - Org chart view shows clear reporting structures
+- **Contact identification** - Current leadership names for direct communication
 - **Organizational planning** - Comprehensive view of governmental structure
+
+### For Media & Transparency
+- **Leadership accountability** - Know who actually runs each department
+- **Authority chains** - Follow decision-making pathways
+- **Government complexity** - Make regional structure understandable to public
 
 ## 🔄 Future Enhancements
 
@@ -230,7 +240,12 @@ MIT License - See [LICENSE](LICENSE) file for details.
 - **173 verified entities** across all jurisdictions
 - **248 documented relationships** with complete legal citations  
 - **100% data validation** with automated quality assurance
-- **Interactive visualization** ready for public use
+- **Dual interactive visualizations** ready for public use
+- **Current leadership integration** - actual names of department heads (2024)
 - **Multi-jurisdictional complexity** successfully mapped and made accessible
 
-**The foundation for regional government transparency has been established.**
+**Two complementary views provide complete government transparency:**
+- **Network View**: Explore relationships and connections
+- **Org Chart View**: Understand hierarchy and command structure
+
+**The foundation for 21st century regional government transparency has been established.**

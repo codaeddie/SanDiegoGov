@@ -175,19 +175,29 @@ src/
 └── data/          # Symlink to ../data/
 ```
 
-### Step 10: D3.js Network Implementation
+### Step 10: D3.js Visualization Implementation
 
-**Core Visualization Components:**
+**Dual Visualization Options:**
+
+**Option A: Network View (Force-Directed Graph)**
 - **Force-directed layout**: Automatic entity positioning
 - **Node styling**: Color by jurisdiction, size by importance
 - **Edge styling**: Different types for different relationships
 - **Interactive features**: Click, drag, zoom, search
 
-**Essential Features:**
+**Option B: Org Chart View (Hierarchical Tree) ⭐ RECOMMENDED**
+- **Tree layout**: Clear hierarchical structure showing command chains
+- **Collapsible branches**: Manage complexity with expand/collapse functionality
+- **Leadership integration**: Include actual names of current department heads
+- **Three-jurisdiction panels**: Separate trees for City/County/Regional
+- **Person-focused display**: Show who actually runs each department
+
+**Essential Features (Both Views):**
 - Entity search and filtering
 - Relationship type filtering
 - Entity detail sidebar
 - Mobile-responsive design
+- Navigation between visualization types
 
 ### Step 11: User Experience Design
 
@@ -351,7 +361,9 @@ def validate_url_accessibility():
 
 ### Phase 4 Visualization
 - [ ] Set up HTML/CSS/JS foundation with D3.js
-- [ ] Implement network graph with your city's data
+- [ ] Choose visualization approach: Network view, Org chart, or both
+- [ ] Research current leadership names for your city/region
+- [ ] Implement chosen visualization(s) with your city's data
 - [ ] Create entity detail pages and navigation
 - [ ] Test on multiple devices and browsers
 - [ ] Deploy for public access
