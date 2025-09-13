@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Diego Government Organizational Chart</title>
+    <meta name="description" content="Hierarchical organizational chart of San Diego's government structure with current leadership names and positions.">
+    
+    <!-- D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="orgchart-styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>San Diego Government Organizational Chart</h1>
+            <p class="subtitle">Hierarchical structure with current leadership (2024)</p>
+            <nav class="view-nav">
+                <a href="index.html" class="nav-link">Network View</a>
+                <a href="orgchart.html" class="nav-link active">Org Chart View</a>
+            </nav>
+            <nav class="chart-nav">
+                <button class="nav-btn active" data-jurisdiction="all">All Jurisdictions</button>
+                <button class="nav-btn" data-jurisdiction="city">City of San Diego</button>
+                <button class="nav-btn" data-jurisdiction="county">County of San Diego</button>
+                <button class="nav-btn" data-jurisdiction="regional">Regional Authorities</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="controls-container">
+            <div class="search-container">
+                <input type="text" id="org-search" placeholder="Search positions or names..." autocomplete="off">
+                <div id="search-results" class="search-results"></div>
+            </div>
+            
+            <div class="chart-controls">
+                <button id="expand-all" class="control-btn">Expand All</button>
+                <button id="collapse-all" class="control-btn">Collapse All</button>
+                <button id="reset-zoom" class="control-btn">Reset View</button>
+            </div>
+            
+            <div class="chart-stats">
+                <span>Total Positions: <strong id="total-positions">173</strong></span>
+                <span>Visible: <strong id="visible-positions">173</strong></span>
+            </div>
+        </div>
+
+        <div class="chart-container">
+            <svg id="org-chart"></svg>
+        </div>
+
+        <!-- Entity Detail Sidebar -->
+        <div id="position-sidebar" class="position-sidebar">
+            <div class="sidebar-header">
+                <button id="close-sidebar" class="close-btn">&times;</button>
+            </div>
+            <div id="position-content" class="position-content">
+                <!-- Dynamic content loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Tooltip -->
+    <div id="org-tooltip" class="tooltip"></div>
+
+    <script src="orgchart-script.js"></script>
+</body>
+</html>

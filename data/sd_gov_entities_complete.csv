@@ -1,6 +1,6 @@
-id,name,type,jurisdiction,parent_entity,website_url,description,legal_source,last_verified
-mayor-001,Todd Gloria,Mayor,City of San Diego,,https://www.sandiego.gov/mayor,Chief Executive Officer of the City,San Diego City Charter,2024-09-03
-council-001,Joe LaCava,City Council President,City of San Diego,,https://www.sandiego.gov/citycouncil/cd1,Legislative body member - District 1,San Diego City Charter,2024-09-03
+id,name,type,jurisdiction,parent_entity,website_url,description,legal_source,last_verified,photo_url,current_members,topic_tags,seat_count,budget
+mayor-001,Todd Gloria,Mayor,City of San Diego,,https://www.sandiego.gov/mayor,Chief Executive Officer of the City,San Diego City Charter,2024-09-03,images/todd-gloria.jpg,,executive;public-safety;housing,,4800000000
+council-001,Joe LaCava,City Council President,City of San Diego,,https://www.sandiego.gov/citycouncil/cd1,Legislative body member - District 1,San Diego City Charter,2024-09-03,images/joe-lacava.jpg,,legislative;housing;environment,,
 council-002,Jennifer Campbell,Councilmember,City of San Diego,,https://www.sandiego.gov/citycouncil/cd2,Legislative body member - District 2,San Diego City Charter,2024-09-03
 council-003,Stephen Whitburn,Councilmember,City of San Diego,,https://www.sandiego.gov/citycouncil/cd3,Legislative body member - District 3,San Diego City Charter,2024-09-03
 council-004,Henry L. Foster III,Councilmember,City of San Diego,,https://www.sandiego.gov/citycouncil/cd4,Legislative body member - District 4,San Diego City Charter,2024-09-03

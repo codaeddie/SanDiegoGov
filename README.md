@@ -1,4 +1,4 @@
-# San Diego Government Chart
+# City of San Diego’s Government “Structure”
 
 An interactive visualization of San Diego's government structure, inspired by SF's [CivLab.org](https://sfgov.civlab.org/).
 
