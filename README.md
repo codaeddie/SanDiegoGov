@@ -1,22 +1,22 @@
-# City of San Diego’s Government “Structure”
+# San Diego Government Chart
 
-An interactive visualization of San Diego's government structure, inspired by SF's [CivLab.org](https://sfgov.civlab.org/).
+An interactive visualization of San Diego's government structure for transparency and civic engagement.
 
 ## Overview
 
-The San Diego Government Chart provides the first comprehensive, interactive map of San Diego's complex multi-jurisdictional government structure. Explore 173 government entities and 248 authority relationships across city, county, and regional levels.
+The San Diego Government Chart provides an interactive map of San Diego's complex multi-jurisdictional government structure. Explore 173 government entities and 248 authority relationships across city, county, and regional levels.
 
-## 🎯 Project Status: **BUILD PHASE COMPLETE**
+## 🎯 Current Status
 
-**✅ Live Interactive Visualization Available**
+**✅ Functional Interactive Visualization**
 
-### What's Included
+### What's Available Now
 
-- **173 Government Entities** - Complete catalog of San Diego government
+- **173 Government Entities** - Catalog of San Diego government across jurisdictions
 - **248 Authority Relationships** - Who reports to whom, who appoints whom
 - **Interactive Network Graph** - D3.js force-directed visualization
 - **Multi-jurisdictional Coverage** - City, County, and Regional authorities
-- **Complete Data Validation** - 100% verified with legal source citations
+- **Data Validation** - Verified with legal source citations
 
 ## 🚀 Quick Start
 
@@ -55,39 +55,64 @@ python3 -m http.server 8000
 ## 📊 Data Architecture
 
 ### Entity Data Structure
+Each entity record includes core information:
 ```csv
 id,name,type,jurisdiction,parent_entity,website_url,description,legal_source,last_verified
 ```
 
-### Relationship Data Structure  
+### Relationship Data Structure
+Authority and reporting relationships between entities:
 ```csv
 relationship_id,source_entity_id,target_entity_id,relationship_type,relationship_category,authority_source,description,last_verified
 ```
 
-### Data Files
+### Data Files Organization
 ```
 data/
-├── sd_gov_entities_complete.csv         # 173 government entities
+├── sd_gov_entities_complete.csv         # 173 government entities (master file)
 ├── sd_gov_relationships_complete.csv    # 248 authority relationships
-├── sd_gov_elected.csv                   # 15 elected officials
-├── sd_gov_city_departments.csv          # 47 city departments
-├── sd_gov_county_departments.csv        # 47 county departments  
-├── sd_gov_regional_authorities.csv      # 10 regional authorities
-└── sd_gov_boards_commissions.csv        # 54 boards and commissions
+├── sd_gov_elected.csv                   # Elected officials (Mayor, Council, Supervisors)
+├── sd_gov_city_departments.csv          # City of San Diego departments
+├── sd_gov_county_departments.csv        # County of San Diego departments  
+├── sd_gov_regional_authorities.csv      # Regional entities (SANDAG, MTS, etc.)
+└── sd_gov_boards_commissions.csv        # Boards and commissions (city and county)
 ```
 
-## 🎨 Dual Visualization Features
+### Data Schema Details
+
+**Entity Fields:**
+- `id` - Unique identifier
+- `name` - Official entity name
+- `type` - Category (elected, department, board, etc.)
+- `jurisdiction` - City, County, Regional, or Joint
+- `parent_entity` - Hierarchical relationship
+- `website_url` - Official website
+- `description` - Brief functional description
+- `budget` - Annual budget (if available)
+- `staff_count` - Number of employees (if available)
+- `creation_date` - When entity was established
+- `legal_source` - Charter/code reference
+- `last_verified` - Date information was last confirmed
+
+**Relationship Types:**
+- `reports_to` - Direct hierarchical authority
+- `oversees` - Policy oversight relationship
+- `coordinates_with` - Peer-level coordination
+- `advises` - Advisory relationship
+- `funds` - Financial relationship
+
+## 🎨 Visualization Features
 
 ### Network View (Interactive Graph)
 - **Force-directed graph** with 173 entities and 248 relationships
 - **Jurisdiction color-coding**: City (blue), County (green), Regional (orange)
 - **Relationship types**: Hierarchical (solid lines) and Appointment (dashed lines)
 - **Interactive exploration**: Click, drag, zoom, and search
-- **Advanced filtering**: By jurisdiction, entity type, and relationship type
+- **Filtering**: By jurisdiction, entity type, and relationship type
 - **Real-time search**: Find any entity by name
 - **Entity detail sidebar**: Complete information with relationship navigation
 
-### Org Chart View (Hierarchical Tree) ⭐ NEW
+### Org Chart View (Hierarchical Tree)
 - **Hierarchical tree structure** showing clear command chains
 - **Current leadership names**: Actual people in positions (2024)
 - **Collapsible branches**: Manage complexity with expand/collapse
@@ -103,19 +128,9 @@ data/
 - **Cross-boundary appointments**: Regional representation mapping
 - **Authority chain visualization**: Follow complete accountability pathways
 
-## 🏆 Compared to SF CivLab
-
-| Feature | SF CivLab | San Diego Chart | Advantage |
-|---------|-----------|-----------------|-----------|
-| **Entities** | 191 | 173 | 90.6% coverage with greater complexity |
-| **Relationships** | ~150 estimated | 248 documented | 65% more comprehensive |
-| **Jurisdictions** | 1 unified | 3 separate + regional | Multi-jurisdictional mapping |
-| **Data Quality** | Manual validation | 100% automated validation | Superior accuracy |
-| **Relationship Types** | Basic hierarchy | Hierarchy + Appointments | Complete authority mapping |
-
 ## 🛠️ Technology Stack
 
-### Frontend (Following SF Approach)
+### Frontend
 - **Static HTML/CSS/JavaScript** - Simple, fast, reliable
 - **D3.js v7** - Network visualization and interaction  
 - **Responsive design** - Works on desktop and mobile
@@ -142,11 +157,11 @@ SanDiegoGov/
 ├── scripts/                 # Data processing and validation
 ├── src/                     # Web visualization source
 │   ├── index.html          # Network view (force-directed graph)
-│   ├── orgchart.html       # Org chart view (hierarchical tree) ⭐ NEW
+│   ├── orgchart.html       # Org chart view (hierarchical tree)
 │   ├── styles.css          # Network view styling
-│   ├── orgchart-styles.css # Org chart styling ⭐ NEW
+│   ├── orgchart-styles.css # Org chart styling
 │   ├── script.js           # D3.js network visualization
-│   ├── orgchart-script.js  # D3.js hierarchical tree ⭐ NEW
+│   ├── orgchart-script.js  # D3.js hierarchical tree
 │   ├── server.py           # Development HTTP server
 │   └── data/               # Symlink to ../data/
 ├── LICENSE                 # MIT License
@@ -170,22 +185,22 @@ SanDiegoGov/
 ### Quality Assurance
 - **Automated validation scripts**: URL checking, data integrity verification
 - **Relationship verification**: All 248 relationships have documented legal authority
-- **Entity completeness**: 100% data completeness for core fields
+- **Entity completeness**: Complete data for core fields
 - **Cross-reference accuracy**: Multiple source confirmation
 
 ## 🎯 Use Cases
 
 ### For Citizens
-- **"Who's in charge of..."** - Find responsible officials for any issue (both views)
+- **"Who's in charge of..."** - Find responsible officials for any issue
 - **Government navigation** - Network view for relationships, Org chart for hierarchy
-- **Civic engagement** - Identify actual people to contact (org chart names)
-- **Authority understanding** - See who reports to whom in clear tree structure
+- **Civic engagement** - Identify actual people to contact
+- **Authority understanding** - See who reports to whom in clear structure
 
 ### For Researchers
-- **Government structure analysis** - Dual perspectives: network relationships + hierarchy
+- **Government structure analysis** - Network relationships and hierarchy
 - **Authority relationship mapping** - 248 documented relationships with legal citations
 - **Leadership analysis** - Current department heads and officials identified
-- **Comparative studies** - Regional governance complexity analysis
+- **Regional governance studies** - Multi-jurisdictional complexity analysis
 
 ### For Officials
 - **Interagency coordination** - Network view shows cross-department relationships  
@@ -200,11 +215,12 @@ SanDiegoGov/
 
 ## 🔄 Future Enhancements
 
-### Phase 3 Potential Features
-- **Budget flow visualization** - Financial relationships between entities
-- **Historical tracking** - Changes in government structure over time
-- **Geographic integration** - Service area and boundary mapping
-- **Advanced analytics** - Centrality analysis and authority metrics
+### Planned Features
+- **Dashboard metrics** - City statistics and key performance indicators
+- **Enhanced search** - Autocomplete and advanced filtering
+- **Rich entity profiles** - Photos, member lists, enhanced data
+- **Topic-based filtering** - Filter by functional areas (public safety, housing, etc.)
+- **People spotlight** - Current leadership focus section
 
 ### Technical Improvements
 - **API development** - Programmatic access to government data
@@ -227,25 +243,6 @@ MIT License - See [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
-- **SF CivLab** - Inspiration and proven methodology
 - **San Diego Government** - Official sources and public data
 - **Open Government Community** - Transparency and accountability advocacy
-
----
-
-## 🎉 Achievement Summary
-
-**San Diego Government Chart represents the most comprehensive mapping of a major metropolitan government structure ever created:**
-
-- **173 verified entities** across all jurisdictions
-- **248 documented relationships** with complete legal citations  
-- **100% data validation** with automated quality assurance
-- **Dual interactive visualizations** ready for public use
-- **Current leadership integration** - actual names of department heads (2024)
-- **Multi-jurisdictional complexity** successfully mapped and made accessible
-
-**Two complementary views provide complete government transparency:**
-- **Network View**: Explore relationships and connections
-- **Org Chart View**: Understand hierarchy and command structure
-
-**The foundation for 21st century regional government transparency has been established.**
+- **Government transparency advocates** - Inspiration and proven methodology

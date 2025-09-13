@@ -7,7 +7,7 @@ This guide provides a step-by-step methodology for replicating the San Diego Gov
 ## Why This Methodology Works
 
 ### Proven Success Pattern
-- **San Francisco**: 191 entities successfully mapped (original CivLab)
+- **Major cities**: 150+ entities successfully mapped in various implementations
 - **San Diego**: 173 entities with 248 relationships mapped (this project)
 - **Scalable approach**: Works for both unified and multi-jurisdictional governments
 - **Technology-agnostic**: Simple CSV data works with any visualization framework
@@ -33,14 +33,13 @@ mkdir -p data docs scripts src
 
 **Essential Files to Create:**
 - `docs/research-methodology.md` - Document your approach
-- `data/README.md` - Data structure documentation
 - `scripts/` - Data processing and validation tools
 
 ### Step 2: Define Government Scope
 
 **Identify Your Government Structure:**
-- **Unified City-County**: Follow SF model (simpler)
-- **Separate City-County**: Follow San Diego model (more complex)
+- **Unified City-County**: Simpler single-jurisdiction model
+- **Separate City-County**: Multi-jurisdictional complexity (follow San Diego model)
 - **Regional Authorities**: Identify special districts and regional coordination bodies
 - **State/Federal Interactions**: Document higher-level authority relationships
 
@@ -156,7 +155,7 @@ appointment_id,appointer_id,appointee_entity_id,appointment_type,confirmation_re
 
 ### Step 9: Technology Setup
 
-**Follow SF/San Diego Proven Stack:**
+**Proven Technology Stack:**
 ```bash
 # Simple, reliable foundation
 HTML/CSS/JavaScript (no frameworks initially)
@@ -216,7 +215,7 @@ src/
 ## City-Specific Adaptations
 
 ### For Simple Unified Governments
-- Focus on single jurisdiction (follow SF model exactly)
+- Focus on single jurisdiction
 - Simpler relationship mapping
 - Direct mayor-council-departments structure
 - Fewer regional coordination complexities
@@ -329,7 +328,7 @@ def validate_url_accessibility():
 ## Success Stories and Variations
 
 ### Proven Implementations
-- **San Francisco**: Original CivLab model (191 entities)
+- **Major metropolitan areas**: Successful government mapping with 150-200+ entities
 - **San Diego**: Multi-jurisdictional adaptation (173 entities, 248 relationships)
 
 ### Potential Variations
@@ -378,7 +377,6 @@ The key to successful replication is following the proven data-first approach ra
 
 ### Documentation References
 - San Diego implementation docs (this repository)
-- SF CivLab original methodology
 - D3.js force-directed network tutorials
 - Government transparency best practices
 
