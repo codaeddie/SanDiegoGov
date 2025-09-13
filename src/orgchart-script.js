@@ -66,7 +66,7 @@ class SanDiegoOrgChart {
     async loadGovernmentData() {
         try {
             // Load the complete government data
-            const response = await fetch('data/sd_gov_entities_complete.csv');
+            const response = await fetch('../data/sd_gov_entities_complete.csv');
             const csvText = await response.text();
             const entities = d3.csvParse(csvText);
             

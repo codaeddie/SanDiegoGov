@@ -228,6 +228,100 @@ SanDiegoGov/
 - **Advanced search** - Full-text search across all entity information
 - **Export capabilities** - Data export in multiple formats
 
+## 🚀 Development Workflow
+
+This project uses a clear separation between development (`src/`) and production (root) files.
+
+### Project Structure
+
+```
+SanDiegoGov/
+├── src/                # DEVELOPMENT FILES (edit these)
+│   ├── index.html      # Network view page
+│   ├── script.js       # Network visualization (uses ../data/)
+│   ├── orgchart.html   # Org chart page
+│   ├── orgchart-script.js # Org chart code (uses ../data/)
+│   ├── styles.css      # Network styles
+│   ├── orgchart-styles.css # Org chart styles
+│   └── server.py       # Development server
+├── data/               # CSV data files (shared between dev/prod)
+│   ├── sd_gov_entities_complete.csv
+│   ├── sd_gov_relationships_complete.csv
+│   └── [other data files]
+├── *.html, *.js, *.css # PRODUCTION FILES (auto-generated via build.sh)
+├── build.sh            # Build script (src/ → root)
+├── dev.sh              # Development server launcher
+└── vercel.json         # Vercel deployment configuration
+```
+
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/SanDiegoGov.git
+cd SanDiegoGov
+
+# Development mode (edit files in src/)
+./dev.sh
+# Visit http://localhost:8000
+
+# Build for production (updates root files)
+./build.sh
+
+# Test production build
+python -m http.server 8000
+
+# Deploy to Vercel
+vercel --prod
+```
+
+### Development Guidelines
+
+1. **Always edit files in `src/` directory** - Never edit root JS/HTML/CSS files directly
+2. **Run `./build.sh` before deploying** - This converts development files to production
+3. **Test production build locally** - Use `python -m http.server 8000` after building
+4. **Data files are shared** - Changes to `/data` CSVs affect both dev and prod immediately
+
+### Adding New Features
+
+When adding new files:
+
+```javascript
+// In src/newfile.js - use development paths:
+d3.csv("../data/your_data.csv")
+```
+
+Then update `build.sh` to include your new files:
+
+```bash
+# Add these lines to build.sh:
+sed 's|../data/|data/|g' src/newfile.js > newfile.js
+cp src/newfile.html newfile.html
+cp src/newfile.css newfile.css
+```
+
+### Daily Workflow
+
+```bash
+# Morning - start development
+./dev.sh                    # Start dev server
+# Edit files in src/ directory
+
+# Ready to deploy?
+./build.sh                  # Build production files
+git add .
+git commit -m "feat: your feature description"
+vercel --prod               # Deploy to production
+```
+
+### Data Updates
+
+```bash
+# Edit CSV files directly
+nano data/sd_gov_entities_complete.csv
+# Changes appear in both dev and prod immediately - no build needed!
+```
+
 ## 🤝 Contributing
 
 We welcome contributions to improve San Diego's government transparency:
