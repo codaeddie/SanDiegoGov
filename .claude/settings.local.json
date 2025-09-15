@@ -5,7 +5,12 @@
       "WebFetch(domain:sfgov.civlab.org)",
       "WebFetch(domain:github.com)",
       "Bash(curl:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(node:*)",
+      "Bash(python:*)",
+      "Bash(./build.sh)",
+      "Bash(chmod:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

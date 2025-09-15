@@ -2,6 +2,7 @@
 class SanDiegoOrgChart {
     constructor() {
         this.governmentData = null;
+        this.relationships = null;
         this.treeData = null;
         this.currentJurisdiction = 'all';
         this.svg = null;
@@ -33,7 +34,10 @@ class SanDiegoOrgChart {
         
         // Load and build government data
         await this.loadGovernmentData();
-        
+
+        // Load relationship data
+        await this.loadRelationshipData();
+
         // Build hierarchical structure
         this.buildHierarchy();
         
@@ -69,15 +73,29 @@ class SanDiegoOrgChart {
             const response = await fetch('data/sd_gov_entities_complete.csv');
             const csvText = await response.text();
             const entities = d3.csvParse(csvText);
-            
+
             // Process entities with leadership names
             this.governmentData = this.processEntitiesWithLeadership(entities);
-            
+
             console.log(`Loaded ${this.governmentData.length} government entities`);
-            
+
         } catch (error) {
             console.error('Error loading government data:', error);
             this.showError('Failed to load government data. Please check that data files are available.');
+        }
+    }
+
+    async loadRelationshipData() {
+        try {
+            const response = await fetch('data/sd_gov_relationships_complete.csv');
+            const csvText = await response.text();
+            this.relationships = d3.csvParse(csvText);
+
+            console.log(`Loaded ${this.relationships.length} government relationships`);
+
+        } catch (error) {
+            console.error('Error loading relationship data:', error);
+            this.showError('Failed to load relationship data. Please check that data files are available.');
         }
     }
     
@@ -148,6 +166,61 @@ class SanDiegoOrgChart {
         }
         return 'departments';
     }
+
+    buildHierarchyFromData(jurisdiction) {
+        if (!this.relationships || !this.governmentData) {
+            console.warn('Missing data for hierarchy building');
+            return [];
+        }
+
+        // Filter relationships to hierarchical ones only
+        const hierarchicalRels = this.relationships.filter(r =>
+            r.relationship_type === 'oversees' || r.relationship_type === 'reports_to'
+        );
+
+        // Get entities for this jurisdiction
+        const jurisdictionEntities = this.governmentData.filter(e =>
+            e.jurisdiction === jurisdiction
+        );
+
+        // Find root entities (entities that are not targets of 'oversees' relationships)
+        const rootEntities = jurisdictionEntities.filter(entity => {
+            // An entity is a root if no other entity oversees it
+            return !hierarchicalRels.some(rel =>
+                rel.relationship_type === 'oversees' && rel.target_entity_id === entity.id
+            );
+        });
+
+        // Recursive function to build node tree
+        const buildNode = (entity, level = 0) => {
+            // Find children - entities that this entity oversees or that report to it
+            const childRelationships = hierarchicalRels.filter(rel => {
+                return (
+                    (rel.relationship_type === 'oversees' && rel.source_entity_id === entity.id) ||
+                    (rel.relationship_type === 'reports_to' && rel.target_entity_id === entity.id)
+                );
+            });
+
+            const children = childRelationships
+                .map(rel => {
+                    const childId = rel.relationship_type === 'oversees' ? rel.target_entity_id : rel.source_entity_id;
+                    const childEntity = this.governmentData.find(e => e.id === childId);
+                    return childEntity ? buildNode(childEntity, level + 1) : null;
+                })
+                .filter(Boolean);
+
+            return {
+                ...entity,
+                name: entity.name,
+                personName: entity.personName || entity.current_members || null,
+                displayTitle: entity.displayTitle || entity.type,
+                level: level,
+                children: children.length > 0 ? children : []
+            };
+        };
+
+        return rootEntities.map(entity => buildNode(entity));
+    }
     
     buildHierarchy() {
         // Create the hierarchical structure based on our government data
@@ -158,311 +231,63 @@ class SanDiegoOrgChart {
             level: 0,
             children: []
         };
-        
-        // Build City hierarchy
-        const cityHierarchy = this.buildCityHierarchy();
-        // Build County hierarchy
-        const countyHierarchy = this.buildCountyHierarchy();
-        // Build Regional hierarchy
-        const regionalHierarchy = this.buildRegionalHierarchy();
-        
-        hierarchy.children = [cityHierarchy, countyHierarchy, regionalHierarchy];
-        
+
+        if (!this.relationships || !this.governmentData) {
+            console.warn('Data not loaded yet, skipping hierarchy build');
+            return;
+        }
+
+        // Build data-driven hierarchies for each jurisdiction
+        const cityEntities = this.buildHierarchyFromData('City of San Diego');
+        const countyEntities = this.buildHierarchyFromData('County of San Diego');
+        const regionalEntities = this.buildHierarchyFromData('Regional');
+
+        // Create jurisdiction containers
+        const jurisdictions = [];
+
+        if (cityEntities.length > 0) {
+            jurisdictions.push({
+                name: 'City of San Diego',
+                id: 'city-root',
+                jurisdiction: 'city',
+                level: 1,
+                children: cityEntities.map(entity => ({ ...entity, level: entity.level + 2 }))
+            });
+        }
+
+        if (countyEntities.length > 0) {
+            jurisdictions.push({
+                name: 'County of San Diego',
+                id: 'county-root',
+                jurisdiction: 'county',
+                level: 1,
+                children: countyEntities.map(entity => ({ ...entity, level: entity.level + 2 }))
+            });
+        }
+
+        if (regionalEntities.length > 0) {
+            jurisdictions.push({
+                name: 'Regional Authorities',
+                id: 'regional-root',
+                jurisdiction: 'regional',
+                level: 1,
+                children: regionalEntities.map(entity => ({ ...entity, level: entity.level + 2 }))
+            });
+        }
+
+        hierarchy.children = jurisdictions;
+
         this.treeData = hierarchy;
         this.root = d3.hierarchy(this.treeData);
         this.root.x0 = this.height / 2;
         this.root.y0 = 0;
-        
+
         // Collapse all nodes initially except root
-        this.root.children.forEach(this.collapse);
+        if (this.root.children) {
+            this.root.children.forEach(child => this.collapse(child));
+        }
     }
     
-    buildCityHierarchy() {
-        const cityEntities = this.governmentData.filter(e => e.jurisdiction === 'city');
-        
-        return {
-            name: 'City of San Diego',
-            id: 'city-root',
-            jurisdiction: 'city',
-            level: 1,
-            children: [
-                {
-                    name: 'Executive Branch',
-                    id: 'city-executive',
-                    jurisdiction: 'city',
-                    level: 2,
-                    children: [
-                        {
-                            name: 'Todd Gloria',
-                            displayTitle: 'Mayor',
-                            id: 'mayor-001',
-                            jurisdiction: 'city',
-                            personName: 'Todd Gloria',
-                            level: 3,
-                            children: this.buildCityDepartments()
-                        }
-                    ]
-                },
-                {
-                    name: 'Legislative Branch',
-                    id: 'city-legislative',
-                    jurisdiction: 'city',
-                    level: 2,
-                    children: [
-                        {
-                            name: 'City Council',
-                            id: 'city-council',
-                            jurisdiction: 'city',
-                            level: 3,
-                            children: this.buildCityCouncil()
-                        }
-                    ]
-                }
-            ]
-        };
-    }
-    
-    buildCityDepartments() {
-        // Major city departments with known leadership
-        return [
-            {
-                name: 'Fire-Rescue Department',
-                displayTitle: 'Fire Chief',
-                personName: 'Robert Logan',
-                id: 'city-fire',
-                jurisdiction: 'city',
-                level: 4,
-                children: []
-            },
-            {
-                name: 'Police Department',
-                displayTitle: 'Police Chief', 
-                personName: 'Scott Wahl',
-                id: 'city-police',
-                jurisdiction: 'city',
-                level: 4,
-                children: []
-            },
-            {
-                name: 'City Attorney',
-                displayTitle: 'City Attorney',
-                personName: 'Heather Ferbert',
-                id: 'city-attorney',
-                jurisdiction: 'city',
-                level: 4,
-                children: []
-            },
-            {
-                name: 'Public Library',
-                displayTitle: 'Library Director',
-                personName: 'Misty Jones',
-                id: 'city-library',
-                jurisdiction: 'city',
-                level: 4,
-                children: []
-            },
-            {
-                name: 'Planning Department',
-                displayTitle: 'Planning Director',
-                id: 'city-planning',
-                jurisdiction: 'city',
-                level: 4,
-                children: []
-            },
-            {
-                name: 'Public Works',
-                displayTitle: 'Public Works Director',
-                id: 'city-public-works',
-                jurisdiction: 'city',
-                level: 4,
-                children: []
-            },
-            {
-                name: 'Parks & Recreation',
-                displayTitle: 'Parks Director',
-                id: 'city-parks',
-                jurisdiction: 'city',
-                level: 4,
-                children: []
-            }
-        ];
-    }
-    
-    buildCityCouncil() {
-        return [
-            {
-                name: 'Joe LaCava',
-                displayTitle: 'Council President (D1)',
-                personName: 'Joe LaCava',
-                id: 'council-001',
-                jurisdiction: 'city',
-                level: 4,
-                children: []
-            },
-            {
-                name: 'Kent Lee',
-                displayTitle: 'Council Pro Tem (D6)',
-                personName: 'Kent Lee', 
-                id: 'council-006',
-                jurisdiction: 'city',
-                level: 4,
-                children: []
-            }
-            // Add other council members...
-        ];
-    }
-    
-    buildCountyHierarchy() {
-        return {
-            name: 'County of San Diego',
-            id: 'county-root',
-            jurisdiction: 'county',
-            level: 1,
-            children: [
-                {
-                    name: 'Board of Supervisors',
-                    id: 'county-supervisors',
-                    jurisdiction: 'county',
-                    level: 2,
-                    children: [
-                        {
-                            name: 'Paloma Aguirre',
-                            displayTitle: 'District 1 Supervisor',
-                            personName: 'Paloma Aguirre',
-                            id: 'supervisor-001',
-                            jurisdiction: 'county',
-                            level: 3,
-                            children: []
-                        },
-                        {
-                            name: 'Terra Lawson-Remer',
-                            displayTitle: 'District 3 Supervisor',
-                            personName: 'Terra Lawson-Remer',
-                            id: 'supervisor-003',
-                            jurisdiction: 'county',
-                            level: 3,
-                            children: []
-                        }
-                        // Add other supervisors...
-                    ]
-                },
-                {
-                    name: 'County Administration',
-                    id: 'county-admin',
-                    jurisdiction: 'county',
-                    level: 2,
-                    children: [
-                        {
-                            name: 'Ebony N. Shelton',
-                            displayTitle: 'Chief Administrative Officer',
-                            personName: 'Ebony N. Shelton',
-                            id: 'county-cao',
-                            jurisdiction: 'county',
-                            level: 3,
-                            children: this.buildCountyDepartments()
-                        }
-                    ]
-                }
-            ]
-        };
-    }
-    
-    buildCountyDepartments() {
-        return [
-            {
-                name: "Sheriff's Department",
-                displayTitle: 'Sheriff',
-                personName: 'Kelly Martinez',
-                id: 'county-sheriff',
-                jurisdiction: 'county',
-                level: 4,
-                children: []
-            },
-            {
-                name: 'District Attorney',
-                displayTitle: 'District Attorney',
-                personName: 'Summer Stephan',
-                id: 'county-da',
-                jurisdiction: 'county',
-                level: 4,
-                children: []
-            },
-            {
-                name: 'Health & Human Services',
-                displayTitle: 'HHSA Deputy CAO',
-                personName: 'Kimberly Giardina',
-                id: 'county-hhsa',
-                jurisdiction: 'county',
-                level: 4,
-                children: []
-            },
-            {
-                name: 'Public Works',
-                displayTitle: 'Public Works Director',
-                personName: 'Marisa K. Barrie, PE',
-                id: 'county-dpw',
-                jurisdiction: 'county',
-                level: 4,
-                children: []
-            }
-        ];
-    }
-    
-    buildRegionalHierarchy() {
-        return {
-            name: 'Regional Authorities',
-            id: 'regional-root',
-            jurisdiction: 'regional',
-            level: 1,
-            children: [
-                {
-                    name: 'SANDAG',
-                    displayTitle: 'CEO',
-                    personName: 'Mario Orso',
-                    id: 'sandag',
-                    jurisdiction: 'regional',
-                    level: 2,
-                    children: []
-                },
-                {
-                    name: 'MTS (Metropolitan Transit)',
-                    displayTitle: 'CEO',
-                    personName: 'Sharon Cooney',
-                    id: 'mts',
-                    jurisdiction: 'regional',
-                    level: 2,
-                    children: []
-                },
-                {
-                    name: 'Port of San Diego',
-                    displayTitle: 'Acting CEO',
-                    personName: 'Randa Coniglio',
-                    id: 'port',
-                    jurisdiction: 'regional',
-                    level: 2,
-                    children: []
-                },
-                {
-                    name: 'Airport Authority',
-                    displayTitle: 'CEO',
-                    personName: 'Kimberly Becker',
-                    id: 'airport',
-                    jurisdiction: 'regional',
-                    level: 2,
-                    children: []
-                },
-                {
-                    name: 'Water Authority',
-                    displayTitle: 'General Manager',
-                    personName: 'Dan Denham',
-                    id: 'water',
-                    jurisdiction: 'regional',
-                    level: 2,
-                    children: []
-                }
-            ]
-        };
-    }
     
     setupEventListeners() {
         // Jurisdiction navigation

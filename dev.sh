@@ -3,11 +3,14 @@
 
 echo "🔧 Starting development server..."
 echo ""
-echo "📂 Working directory: src/"
-echo "🌐 Server URL: http://localhost:8000"
+echo "📂 Working directory: $(pwd)"
+echo "🌐 Server URL: http://localhost:8012"
 echo ""
-echo "Note: Edit files in src/ directory"
-echo "When ready to deploy, run: ./build.sh"
+echo "📊 Network View: http://localhost:8012"
+echo "🌳 Org Chart: http://localhost:8012/orgchart.html"
+echo ""
+echo "Note: Edit files directly in root directory"
+echo "Files are production-ready - no build step needed"
 echo ""
 
-cd src && python server.py
+python3 server.py

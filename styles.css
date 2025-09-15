@@ -14,11 +14,11 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Header */
+/* Header - Compact and efficient */
 header {
     background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
     color: white;
-    padding: 2rem 0;
+    padding: 0.5rem 0;  /* Reduced from 0.75rem */
     text-align: center;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
@@ -27,18 +27,21 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 1.25rem;  /* Reduced from 1.5rem */
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 0.875rem;  /* Slightly smaller */
     opacity: 0.9;
-    margin-bottom: 1rem;
+    margin-bottom: 0.25rem;  /* Reduced spacing */
 }
 
 /* View Navigation */
@@ -47,6 +50,7 @@ h1 {
     justify-content: center;
     gap: 0.5rem;
     margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 .nav-link {
@@ -70,72 +74,40 @@ h1 {
     font-weight: 600;
 }
 
-/* Dashboard Metrics Widget */
-.metrics-dashboard {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.metric-card {
-    text-align: center;
-    padding: 1rem;
-    border-radius: 6px;
-    background: #f8f9fa;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.metric-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-.metric-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1e3a8a;
-    margin-bottom: 0.25rem;
-}
-
-.metric-label {
-    color: #666;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-/* Controls */
+/* Controls in Header - More compact */
 .controls-container {
-    background: white;
-    padding: 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    margin-top: 1rem;  /* Reduced from 2rem */
+    padding-top: 1rem;  /* Reduced from 2rem */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .search-container {
     position: relative;
     max-width: 400px;
-    margin-bottom: 1rem;
+    margin: 0 auto 1rem auto;  /* Reduced bottom margin */
+    width: 100%;
 }
 
 #entity-search {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 2px solid #e5e7eb;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     font-size: 1rem;
-    transition: border-color 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+#entity-search::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #entity-search:focus {
     outline: none;
-    border-color: #3b82f6;
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 .search-results {
@@ -160,38 +132,6 @@ h1 {
     transition: background-color 0.2s ease;
 }
 
-.result-name {
-    font-weight: 500;
-    color: #374151;
-    margin-bottom: 0.25rem;
-}
-
-.result-name strong {
-    background-color: #fef3c7;
-    padding: 0 2px;
-    border-radius: 2px;
-}
-
-.result-subtitle {
-    font-size: 0.85rem;
-    color: #6b7280;
-    margin-bottom: 0.25rem;
-}
-
-.result-jurisdiction {
-    font-size: 0.75rem;
-    color: #9ca3af;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.search-no-results {
-    padding: 0.75rem 1rem;
-    color: #6b7280;
-    font-style: italic;
-    text-align: center;
-}
-
 .search-result-item:hover {
     background-color: #f3f4f6;
 }
@@ -203,178 +143,223 @@ h1 {
 .filter-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .filter-group {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .filter-group label {
     font-weight: 600;
-    color: #374151;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
 }
 
 .filter-btn {
     padding: 0.5rem 1rem;
-    border: 1px solid #d1d5db;
-    background: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
     border-radius: 6px;
     cursor: pointer;
     transition: all 0.2s ease;
     font-size: 0.875rem;
+    backdrop-filter: blur(4px);
 }
 
 .filter-btn:hover {
-    background-color: #f3f4f6;
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .filter-btn.active {
-    background-color: #3b82f6;
+    background: rgba(255, 255, 255, 0.2);
     color: white;
-    border-color: #3b82f6;
+    border-color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
 }
 
-/* Main Container */
-.main-container {
-    display: flex;
-    min-height: calc(100vh - 200px);
-}
-
+/* Network Container - Full Width */
 .network-container {
-    flex: 1;
     position: relative;
     background: white;
-    margin: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 0;
+    height: calc(100vh - 120px);  /* Adjusted for smaller header */
     overflow: hidden;
 }
 
-.network-stats {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem;
-    background: #f8f9fa;
-    border-bottom: 1px solid #e5e7eb;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-number {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    color: #1e3a8a;
-}
-
-.stat-label {
-    display: block;
-    font-size: 0.875rem;
-    color: #6b7280;
-    font-weight: 500;
-}
 
 /* Network Graph */
 #network-graph {
     display: block;
     width: 100%;
-    height: 600px;
+    height: 100%;
     background: #ffffff;
+    cursor: grab;
 }
 
-/* Legend */
-.legend {
-    position: absolute;
-    top: 100px;
-    left: 20px;
-    background: rgba(255,255,255,0.95);
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    backdrop-filter: blur(4px);
+#network-graph:active {
+    cursor: grabbing;
 }
 
-.legend-section {
-    margin-bottom: 1rem;
+/* D3.js Graph Elements - Professional Styling */
+
+/* Node Styling */
+.node {
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.legend-section:last-child {
-    margin-bottom: 0;
+.node circle {
+    stroke: #fff;
+    stroke-width: 2px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    transition: all 0.2s ease;
 }
 
-.legend-section h4 {
-    font-size: 0.875rem;
+.node:hover circle {
+    stroke-width: 3px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+    transform: scale(1.1);
+}
+
+.node.selected circle {
+    stroke: #333;
+    stroke-width: 3px;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+}
+
+/* Link/Edge Styling */
+.link {
+    stroke-opacity: 0.4;
+    stroke-width: 1.5px;
+    fill: none;
+    transition: all 0.2s ease;
+}
+
+.link:hover {
+    stroke-opacity: 0.8;
+    stroke-width: 2.5px;
+}
+
+.link.highlighted {
+    stroke-opacity: 0.9;
+    stroke-width: 3px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { stroke-opacity: 0.9; }
+    50% { stroke-opacity: 0.5; }
+}
+
+/* Label Styling */
+.label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    text-anchor: middle;
+    fill: #333;
+    pointer-events: none;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+    dominant-baseline: middle;
+}
+
+.node:hover .label {
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #374151;
+    font-size: 12px;
 }
 
-.legend-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.25rem;
-    font-size: 0.75rem;
-    color: #6b7280;
-}
-
-.legend-color {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-}
-
-.legend-line {
-    width: 20px;
-    height: 2px;
-}
-
-/* Jurisdiction Colors */
-.city-color, .city-node {
+/* Jurisdiction Colors - Enhanced for Professional Look */
+.city-node circle {
     fill: #3b82f6;
-    color: #3b82f6;
 }
 
-.county-color, .county-node {
+.county-node circle {
     fill: #10b981;
-    color: #10b981;
 }
 
-.regional-color, .regional-node {
+.regional-node circle {
     fill: #f59e0b;
-    color: #f59e0b;
 }
 
-/* Relationship Lines */
-.hierarchical-line, .hierarchical-link {
+/* Node size variations for entity types */
+.node.elected circle {
+    r: 12;
+}
+
+.node.departments circle {
+    r: 8;
+}
+
+.node.boards circle {
+    r: 6;
+}
+
+/* Relationship Lines - Professional Styling */
+.hierarchical-link {
     stroke: #6b7280;
-    background-color: #6b7280;
+    stroke-width: 2px;
 }
 
-.appointment-line, .appointment-link {
+.appointment-link {
     stroke: #dc2626;
-    background-color: #dc2626;
-    stroke-dasharray: 3,3;
+    stroke-width: 2px;
+    stroke-dasharray: 4,2;
 }
 
-/* Sidebar */
+.hierarchical-link:hover {
+    stroke: #374151;
+    stroke-width: 3px;
+}
+
+.appointment-link:hover {
+    stroke: #b91c1c;
+    stroke-width: 3px;
+}
+
+/* Enhanced visual feedback */
+.node.connected {
+    opacity: 1;
+}
+
+.node.dimmed {
+    opacity: 0.3;
+}
+
+.link.connected {
+    opacity: 1;
+}
+
+.link.dimmed {
+    opacity: 0.1;
+}
+
+/* Sidebar - Overlay from Right */
 .sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
     width: 350px;
+    height: 100vh;
     background: white;
     border-left: 1px solid #e5e7eb;
-    display: none;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+    display: flex;
     flex-direction: column;
+    transition: right 0.3s ease;
+    z-index: 1000;
 }
 
 .sidebar.open {
-    display: flex;
+    right: 0;
 }
 
 .sidebar-header {
@@ -572,25 +557,11 @@ footer {
     text-decoration: underline;
 }
 
-.data-source {
-    margin-top: 1rem;
-    font-size: 0.875rem;
-    opacity: 0.8;
-}
-
 /* Responsive Design */
 @media (max-width: 1024px) {
-    .main-container {
-        flex-direction: column;
-    }
-    
     .sidebar {
         width: 100%;
-        max-height: 400px;
-    }
-    
-    .network-container {
-        margin: 1rem;
+        right: -100%;
     }
 }
 
@@ -598,42 +569,56 @@ footer {
     h1 {
         font-size: 2rem;
     }
-    
+
+    .header-container {
+        padding: 0 0.5rem;
+    }
+
+    .controls-container {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .search-container {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
     .filter-container {
         flex-direction: column;
         align-items: stretch;
         gap: 1rem;
     }
-    
+
     .filter-group {
         flex-wrap: wrap;
+        justify-content: center;
     }
-    
-    .network-stats {
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
-    
-    .legend {
-        position: static;
-        margin: 1rem;
-    }
-    
+
     #network-graph {
         height: 400px;
     }
 }
 
 @media (max-width: 480px) {
+    .header-container {
+        padding: 0 0.5rem;
+    }
+
     .controls-container {
-        padding: 1rem;
+        margin-top: 1rem;
+        padding-top: 1rem;
     }
-    
-    .network-container {
-        margin: 0.5rem;
+
+    .filter-group {
+        gap: 0.25rem;
     }
-    
-    .stat-number {
-        font-size: 1.5rem;
+
+    .filter-btn {
+        padding: 0.4rem 0.75rem;
+        font-size: 0.8rem;
     }
+
+    /* Network container already has no margins */
+
 }

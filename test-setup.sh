@@ -1,5 +1,5 @@
 #!/bin/bash
-# Test script to verify the setup
+# Test script to verify the single-directory setup
 
 echo "🧪 Testing San Diego Government Chart Setup"
 echo "=========================================="
@@ -8,11 +8,11 @@ echo ""
 # Check if all required files exist
 echo "📁 Checking file structure..."
 
-# Check src files
-if [ -f "src/script.js" ] && [ -f "src/orgchart-script.js" ] && [ -f "src/index.html" ]; then
-    echo "✅ Source files present in src/"
+# Check root files (single directory structure)
+if [ -f "script.js" ] && [ -f "orgchart-script.js" ] && [ -f "index.html" ]; then
+    echo "✅ Main files present in root directory"
 else
-    echo "❌ Missing source files in src/"
+    echo "❌ Missing main files in root directory"
     exit 1
 fi
 
@@ -25,46 +25,31 @@ else
 fi
 
 # Check scripts
-if [ -f "build.sh" ] && [ -f "dev.sh" ]; then
-    echo "✅ Build scripts present"
+if [ -f "build.sh" ] && [ -f "dev.sh" ] && [ -f "server.py" ]; then
+    echo "✅ Build and server scripts present"
 else
-    echo "❌ Missing build scripts"
+    echo "❌ Missing scripts"
     exit 1
 fi
 
 echo ""
 echo "🔍 Checking path configurations..."
 
-# Check if src files use correct dev paths
-if grep -q "../data/" src/script.js && grep -q "../data/" src/orgchart-script.js; then
-    echo "✅ Source files use correct ../data/ paths"
+# Check if root files use correct paths
+if grep -q "data/" script.js && grep -q "data/" orgchart-script.js; then
+    echo "✅ Files use correct data/ paths"
 else
-    echo "❌ Source files have incorrect paths"
-    echo "   Run: sed -i 's|data/|../data/|g' src/*.js"
+    echo "❌ Files have incorrect data paths"
 fi
 
 echo ""
-echo "🏗️  Running build test..."
+echo "🌐 Testing server functionality..."
 
-# Try to run build
-if bash build.sh > /dev/null 2>&1; then
-    echo "✅ Build script executed successfully"
-    
-    # Check if production files were created
-    if [ -f "script.js" ] && [ -f "orgchart-script.js" ]; then
-        echo "✅ Production files generated"
-        
-        # Check if production files use correct paths
-        if grep -q "data/" script.js && ! grep -q "../data/" script.js; then
-            echo "✅ Production files use correct data/ paths"
-        else
-            echo "❌ Production files have incorrect paths"
-        fi
-    else
-        echo "❌ Production files not generated"
-    fi
+# Check if server can start (quick test)
+if python3 -c "import http.server; print('Python server available')" > /dev/null 2>&1; then
+    echo "✅ Python server available"
 else
-    echo "❌ Build script failed"
+    echo "❌ Python server not available"
 fi
 
 echo ""
@@ -72,13 +57,14 @@ echo "=========================================="
 echo "📊 Test Summary:"
 echo ""
 
-if [ -f "script.js" ] && [ -f "orgchart-script.js" ] && [ -f "index.html" ]; then
+if [ -f "script.js" ] && [ -f "orgchart-script.js" ] && [ -f "index.html" ] && [ -f "data/sd_gov_entities_complete.csv" ]; then
     echo "✅ Setup is COMPLETE and WORKING!"
     echo ""
-    echo "You can now:"
-    echo "  1. Run './dev.sh' for development"
-    echo "  2. Run 'python -m http.server 8000' to test production"
-    echo "  3. Run 'vercel --prod' to deploy"
+    echo "Single-directory structure ready:"
+    echo "  🔧 Run './dev.sh' to start development server"
+    echo "  🌐 Access http://localhost:8012 for Network View"
+    echo "  🌳 Access http://localhost:8012/orgchart.html for Org Chart"
+    echo "  🚀 Run 'vercel --prod' to deploy"
 else
     echo "⚠️  Setup needs attention. Check errors above."
 fi

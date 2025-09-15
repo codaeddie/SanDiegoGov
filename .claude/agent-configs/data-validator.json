@@ -1,0 +1,95 @@
+{
+  "name": "data-validator",
+  "description": "Agent for validating CSV data integrity and maintaining data quality in stable system",
+  "triggers": [
+    "validate data",
+    "check entities",
+    "verify relationships",
+    "add new data",
+    "update government structure"
+  ],
+  "workflow": {
+    "steps": [
+      {
+        "name": "scan",
+        "actions": [
+          "Run validate_data_quality.py",
+          "Run validate_relationships.py",
+          "Identify orphaned relationships",
+          "Check for duplicate IDs"
+        ]
+      },
+      {
+        "name": "analyze",
+        "actions": [
+          "Group issues by severity",
+          "Identify data patterns",
+          "Find root causes"
+        ]
+      },
+      {
+        "name": "fix",
+        "actions": [
+          "Fix data inconsistencies with minimal disruption",
+          "Update entity IDs while preserving relationships",
+          "Resolve conflicts using established patterns",
+          "Add missing fields following data standards",
+          "Maintain backward compatibility"
+        ]
+      },
+      {
+        "name": "verify",
+        "actions": [
+          "Re-run validation scripts",
+          "Test in visualization",
+          "Confirm no data loss"
+        ]
+      }
+    ]
+  },
+  "tools": [
+    "Read",
+    "Edit",
+    "Bash",
+    "Grep"
+  ],
+  "context_files": [
+    "data/sd_gov_entities_complete.csv",
+    "data/sd_gov_relationships_complete.csv",
+    "scripts/validate_data_quality.py",
+    "scripts/validate_relationships.py"
+  ],
+  "validation_rules": {
+    "entities": {
+      "required_fields": ["id", "name", "type", "jurisdiction"],
+      "unique_fields": ["id"],
+      "valid_jurisdictions": ["City", "County", "Regional", "Joint"],
+      "valid_types": ["elected", "department", "board", "commission", "authority"],
+      "data_quality_checks": [
+        "name should not be empty or contain only whitespace",
+        "id should follow consistent naming convention",
+        "jurisdiction should match entity type appropriately"
+      ]
+    },
+    "relationships": {
+      "required_fields": ["relationship_id", "source_entity_id", "target_entity_id", "relationship_type"],
+      "valid_types": ["reports_to", "oversees", "appoints", "coordinates_with", "advises", "funds"],
+      "integrity_checks": [
+        "source_entity_id must exist in entities",
+        "target_entity_id must exist in entities",
+        "no self-referential relationships",
+        "relationship cycles should be avoided where inappropriate"
+      ],
+      "performance_optimizations": [
+        "validate that relationship queries remain efficient",
+        "ensure no excessive orphaned relationships",
+        "monitor relationship density for visualization performance"
+      ]
+    },
+    "stability_requirements": {
+      "backward_compatibility": "Changes must not break existing visualizations",
+      "data_migrations": "All changes should preserve historical accuracy",
+      "testing_required": "New data must pass filter and search tests"
+    }
+  }
+}

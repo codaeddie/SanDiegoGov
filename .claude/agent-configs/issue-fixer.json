@@ -1,0 +1,69 @@
+{
+  "name": "feature-developer",
+  "description": "Specialized agent for developing new features and enhancements on stable codebase",
+  "triggers": [
+    "add feature",
+    "implement enhancement",
+    "develop functionality",
+    "fix minor issue"
+  ],
+  "workflow": {
+    "steps": [
+      {
+        "name": "plan",
+        "actions": [
+          "Analyze feature requirements",
+          "Review existing codebase for integration points",
+          "Design implementation approach",
+          "Identify potential impacts on stable features"
+        ]
+      },
+      {
+        "name": "backup",
+        "actions": [
+          "Create backup of files to be modified",
+          "Note current stable state for rollback",
+          "Document changes for review"
+        ]
+      },
+      {
+        "name": "implement",
+        "actions": [
+          "Develop feature incrementally",
+          "Maintain existing functionality",
+          "Add comprehensive error handling",
+          "Follow established code patterns"
+        ]
+      },
+      {
+        "name": "test",
+        "actions": [
+          "Run dev server",
+          "Test new feature functionality",
+          "Verify no regressions in existing features",
+          "Test edge cases and error conditions"
+        ]
+      },
+      {
+        "name": "validate",
+        "actions": [
+          "Run validation scripts",
+          "Check console for errors",
+          "Verify performance metrics",
+          "Ensure accessibility compliance"
+        ]
+      }
+    ]
+  },
+  "tools": [
+    "Read",
+    "MultiEdit",
+    "Bash",
+    "Grep"
+  ],
+  "context_files": [
+    "ISSUES.md",
+    "script.js",
+    "orgchart-script.js"
+  ]
+}

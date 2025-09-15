@@ -23,6 +23,20 @@ class SanDiegoGovChart {
         this.nodeElements = null;
         this.linkElements = null;
         
+        // Create reusable tooltip
+        this.tooltip = d3.select("body")
+            .append("div")
+            .attr("class", "network-tooltip")
+            .style("position", "absolute")
+            .style("visibility", "hidden")
+            .style("background", "rgba(0,0,0,0.85)")
+            .style("color", "white")
+            .style("padding", "8px")
+            .style("border-radius", "4px")
+            .style("font-size", "12px")
+            .style("pointer-events", "none")
+            .style("z-index", "1000");
+        
         this.init();
     }
     
@@ -31,7 +45,9 @@ class SanDiegoGovChart {
         
         // Set up responsive dimensions
         this.updateDimensions();
-        window.addEventListener('resize', () => this.updateDimensions());
+        // Bind this properly for the resize handler
+        this.boundUpdateDimensions = () => this.updateDimensions();
+        window.addEventListener('resize', this.boundUpdateDimensions);
         
         // Set up zoom
         const zoom = d3.zoom()
@@ -92,8 +108,10 @@ class SanDiegoGovChart {
             // Process relationships
             this.relationships = relationshipsData.map(d => ({
                 id: d.relationship_id,
-                source: d.source_entity_id,
-                target: d.target_entity_id,
+                sourceId: d.source_entity_id,  // Keep original string
+                targetId: d.target_entity_id,  // Keep original string
+                source: d.source_entity_id,    // Let D3 mutate this
+                target: d.target_entity_id,    // Let D3 mutate this
                 type: d.relationship_type,
                 category: d.relationship_category,
                 description: d.description,
@@ -101,9 +119,6 @@ class SanDiegoGovChart {
             }));
             
             console.log(`Loaded ${this.entities.length} entities and ${this.relationships.length} relationships`);
-            
-            // Update dashboard metrics
-            this.updateDashboardMetrics();
             
             // Initialize filtered data
             this.applyFilters();
@@ -162,14 +177,20 @@ class SanDiegoGovChart {
             });
         });
         
-        // Search functionality
+        // Search functionality with debouncing
         const searchInput = document.getElementById('entity-search');
         const searchResults = document.getElementById('search-results');
         
+        // Debounce search to prevent excessive DOM updates
+        let searchTimeout;
         searchInput.addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
             const query = e.target.value.toLowerCase().trim();
+            
             if (query.length > 1) {
-                this.showSearchResults(query);
+                searchTimeout = setTimeout(() => {
+                    this.showSearchResults(query);
+                }, 150);  // 150ms debounce
             } else {
                 searchResults.style.display = 'none';
             }
@@ -217,7 +238,7 @@ class SanDiegoGovChart {
             
             searchResults.style.display = 'block';
         } else {
-            searchResults.innerHTML = '<div class="search-no-results">No entities found</div>';
+            searchResults.innerHTML = '<div class="search-result-item">No entities found</div>';
             searchResults.style.display = 'block';
         }
     }
@@ -239,11 +260,11 @@ class SanDiegoGovChart {
         
         // Filter relationships
         this.filteredRelationships = this.relationships.filter(rel => {
-            const entityMatch = entityIds.has(rel.source) && entityIds.has(rel.target);
-            
-            const relationshipTypeMatch = this.currentFilters.relationshipType === 'all-rels' || 
+            const entityMatch = entityIds.has(rel.sourceId) && entityIds.has(rel.targetId);
+
+            const relationshipTypeMatch = this.currentFilters.relationshipType === 'all-rels' ||
                                         rel.category === this.currentFilters.relationshipType;
-            
+
             return entityMatch && relationshipTypeMatch;
         });
         
@@ -252,8 +273,9 @@ class SanDiegoGovChart {
     }
     
     updateStats() {
-        document.getElementById('visible-entities').textContent = this.filteredEntities.length;
-        document.getElementById('relationship-count').textContent = this.filteredRelationships.length;
+        // Stats display removed for minimal interface
+        // Could add console logging for debugging:
+        // console.log(`Showing ${this.filteredEntities.length} entities, ${this.filteredRelationships.length} relationships`);
     }
     
     createVisualization() {
@@ -264,16 +286,20 @@ class SanDiegoGovChart {
         
         console.log(`Creating visualization with ${this.filteredEntities.length} entities and ${this.filteredRelationships.length} relationships`);
         
-        // Create force simulation
+        // Create force simulation - optimized settings
         this.simulation = d3.forceSimulation(this.filteredEntities)
             .force("link", d3.forceLink(this.filteredRelationships)
                 .id(d => d.id)
-                .distance(d => this.getLinkDistance(d)))
+                .distance(90)
+                .strength(0.7))
             .force("charge", d3.forceManyBody()
-                .strength(d => this.getNodeCharge(d)))
+                .strength(-400)
+                .distanceMax(500))  // Don't calculate beyond this
             .force("center", d3.forceCenter(this.width / 2, this.height / 2))
             .force("collision", d3.forceCollide()
-                .radius(d => this.getNodeRadius(d) + 5));
+                .radius(d => this.getNodeRadius(d) + 5))
+            .alphaDecay(0.02)  // Control simulation cooling
+            .velocityDecay(0.4);  // Damping factor for stability
         
         this.createLinks();
         this.createNodes();
@@ -285,7 +311,7 @@ class SanDiegoGovChart {
     createLinks() {
         this.linkElements = this.container
             .selectAll(".link")
-            .data(this.filteredRelationships)
+            .data(this.filteredRelationships, d => `${d.sourceId}-${d.targetId}`)
             .enter()
             .append("line")
             .attr("class", d => `link ${d.category}-link`)
@@ -296,23 +322,24 @@ class SanDiegoGovChart {
     createNodes() {
         this.nodeElements = this.container
             .selectAll(".node")
-            .data(this.filteredEntities)
+            .data(this.filteredEntities, d => d.id)
             .enter()
-            .append("circle")
+            .append("g")
             .attr("class", d => `node ${d.jurisdiction}-node`)
-            .attr("r", d => this.getNodeRadius(d))
-            .attr("stroke", "#fff")
-            .attr("stroke-width", 2)
             .on("click", (event, d) => this.selectEntity(d.id))
             .on("mouseover", (event, d) => this.showTooltip(event, d))
             .on("mouseout", () => this.hideTooltip())
             .call(this.drag());
-        
+
+        // Add circles to nodes
+        this.nodeElements.append("circle")
+            .attr("r", d => this.getNodeRadius(d))
+            .attr("stroke", "#fff")
+            .attr("stroke-width", 2);
+
         // Add labels for important entities
-        this.container
-            .selectAll(".label")
-            .data(this.filteredEntities.filter(d => this.shouldShowLabel(d)))
-            .enter()
+        this.nodeElements
+            .filter(d => this.shouldShowLabel(d))
             .append("text")
             .attr("class", "label")
             .attr("text-anchor", "middle")
@@ -340,18 +367,9 @@ class SanDiegoGovChart {
         if (entity.entityType === 'boards') return 6;
         return 6;
     }
-    
-    getNodeCharge(entity) {
-        if (entity.entityType === 'elected') return -500;
-        if (entity.entityType === 'departments') return -300;
-        return -200;
-    }
-    
-    getLinkDistance(relationship) {
-        if (relationship.category === 'hierarchical') return 80;
-        if (relationship.category === 'appointment') return 100;
-        return 90;
-    }
+
+    // Removed getEdgePosition, getNodeCharge, getLinkDistance
+    // Using fixed optimized values for better performance
     
     drag() {
         return d3.drag()
@@ -372,6 +390,7 @@ class SanDiegoGovChart {
     }
     
     tick() {
+        // Simple, fast, no bullshit - let D3 do what it's designed to do
         if (this.linkElements) {
             this.linkElements
                 .attr("x1", d => d.source.x)
@@ -379,23 +398,19 @@ class SanDiegoGovChart {
                 .attr("x2", d => d.target.x)
                 .attr("y2", d => d.target.y);
         }
-        
+
         if (this.nodeElements) {
             this.nodeElements
-                .attr("cx", d => d.x)
-                .attr("cy", d => d.y);
+                .attr("transform", d => `translate(${d.x},${d.y})`);
         }
-        
-        this.container.selectAll(".label")
-            .attr("x", d => d.x)
-            .attr("y", d => d.y);
     }
     
     updateVisualization() {
-        // Remove existing elements
-        this.container.selectAll("*").remove();
+        // Clear and rebuild - simpler and often faster for major changes
+        this.container.selectAll(".link").remove();
+        this.container.selectAll(".node").remove();
         
-        // Recreate visualization
+        // Recreate visualization with new data
         this.createVisualization();
     }
     
@@ -410,11 +425,15 @@ class SanDiegoGovChart {
     highlightEntity(entityId) {
         // Reset all nodes
         this.nodeElements.style("opacity", 0.3);
+        this.nodeElements.selectAll("circle")
+            .attr("stroke", "#fff")
+            .attr("stroke-width", 2);
         this.linkElements.style("opacity", 0.1);
         
         // Highlight selected node
         this.nodeElements.filter(d => d.id === entityId)
             .style("opacity", 1)
+            .selectAll("circle")
             .attr("stroke", "#ff6b35")
             .attr("stroke-width", 3);
         
@@ -425,7 +444,7 @@ class SanDiegoGovChart {
                 // Highlight connected nodes
                 this.nodeElements.filter(d => d.id === rel.source.id || d.id === rel.target.id)
                     .style("opacity", 1);
-                
+
                 // Highlight links
                 this.linkElements.filter(d => d.id === rel.id)
                     .style("opacity", 0.8)
@@ -466,8 +485,8 @@ class SanDiegoGovChart {
     }
     
     getEntityRelationships(entityId) {
-        return this.relationships.filter(rel => 
-            rel.source === entityId || rel.target === entityId
+        return this.relationships.filter(rel =>
+            rel.sourceId === entityId || rel.targetId === entityId
         );
     }
     
@@ -482,10 +501,10 @@ class SanDiegoGovChart {
                 <div class="relationship-group">
                     <div class="relationship-type">Hierarchical (${hierarchical.length})</div>
                     ${hierarchical.map(rel => {
-                        const otherEntity = this.entities.find(e => 
-                            e.id === (rel.source === currentEntityId ? rel.target : rel.source)
+                        const otherEntity = this.entities.find(e =>
+                            e.id === (rel.sourceId === currentEntityId ? rel.targetId : rel.sourceId)
                         );
-                        const isParent = rel.target === currentEntityId;
+                        const isParent = rel.targetId === currentEntityId;
                         return `
                             <div class="relationship-item hierarchical" data-entity-id="${otherEntity?.id}">
                                 <div class="relationship-entity">
@@ -504,10 +523,10 @@ class SanDiegoGovChart {
                 <div class="relationship-group">
                     <div class="relationship-type">Appointments (${appointment.length})</div>
                     ${appointment.map(rel => {
-                        const otherEntity = this.entities.find(e => 
-                            e.id === (rel.source === currentEntityId ? rel.target : rel.source)
+                        const otherEntity = this.entities.find(e =>
+                            e.id === (rel.sourceId === currentEntityId ? rel.targetId : rel.sourceId)
                         );
-                        const isAppointer = rel.source === currentEntityId;
+                        const isAppointer = rel.sourceId === currentEntityId;
                         return `
                             <div class="relationship-item appointment" data-entity-id="${otherEntity?.id}">
                                 <div class="relationship-entity">
@@ -541,7 +560,8 @@ class SanDiegoGovChart {
         
         // Reset highlighting
         if (this.nodeElements) {
-            this.nodeElements.style("opacity", 1)
+            this.nodeElements.style("opacity", 1);
+            this.nodeElements.selectAll("circle")
                 .attr("stroke", "#fff")
                 .attr("stroke-width", 2);
         }
@@ -552,27 +572,51 @@ class SanDiegoGovChart {
     }
     
     showTooltip(event, entity) {
-        // Simple tooltip implementation
-        const tooltip = d3.select("body")
-            .append("div")
-            .attr("class", "tooltip")
-            .style("position", "absolute")
-            .style("background", "rgba(0,0,0,0.8)")
-            .style("color", "white")
-            .style("padding", "8px")
-            .style("border-radius", "4px")
-            .style("font-size", "12px")
-            .style("pointer-events", "none")
-            .style("z-index", "1000")
+        // Use reusable tooltip - no DOM thrashing
+        this.tooltip
+            .style("visibility", "visible")
             .html(`<strong>${entity.name}</strong><br/>${entity.type}`)
             .style("left", (event.pageX + 10) + "px")
             .style("top", (event.pageY - 10) + "px");
     }
     
     hideTooltip() {
-        d3.selectAll(".tooltip").remove();
+        this.tooltip.style("visibility", "hidden");
     }
     
+    highlightConnections(focusNode) {
+        const connectedNodes = new Set();
+        const connectedLinks = new Set();
+
+        // Find all connected nodes and links
+        this.filteredRelationships.forEach(rel => {
+            if (rel.sourceId === focusNode.id || rel.targetId === focusNode.id) {
+                connectedLinks.add(`${rel.sourceId}-${rel.targetId}`);
+                connectedNodes.add(rel.sourceId);
+                connectedNodes.add(rel.targetId);
+            }
+        });
+
+        // Apply highlighting styles
+        this.nodeElements
+            .classed("connected", d => connectedNodes.has(d.id))
+            .classed("dimmed", d => !connectedNodes.has(d.id));
+
+        this.linkElements
+            .classed("connected", d => connectedLinks.has(`${d.sourceId}-${d.targetId}`))
+            .classed("dimmed", d => !connectedLinks.has(`${d.sourceId}-${d.targetId}`));
+    }
+
+    clearHighlights() {
+        this.nodeElements
+            .classed("connected", false)
+            .classed("dimmed", false);
+
+        this.linkElements
+            .classed("connected", false)
+            .classed("dimmed", false);
+    }
+
     showError(message) {
         console.error(message);
         const container = this.svg.node().parentNode;
@@ -587,46 +631,37 @@ class SanDiegoGovChart {
         `;
     }
     
-    updateDashboardMetrics() {
-        // Calculate total budget from entities with budget data
-        const entitiesWithBudget = this.entities.filter(e => e.budget && e.budget !== '');
-        const totalBudget = entitiesWithBudget.reduce((sum, e) => {
-            const budget = parseFloat(e.budget.toString().replace(/[,$]/g, ''));
-            return sum + (isNaN(budget) ? 0 : budget);
-        }, 0);
-        
-        // Update budget display
-        const budgetElement = document.getElementById('total-budget');
-        if (budgetElement && totalBudget > 0) {
-            budgetElement.textContent = `$${(totalBudget / 1000000000).toFixed(1)}B`;
+    // Cleanup method to prevent memory leaks
+    destroy() {
+        // Stop simulation
+        if (this.simulation) {
+            this.simulation.stop();
         }
         
-        // Count employees (if data available)
-        const entitiesWithEmployees = this.entities.filter(e => e.employees && e.employees !== '');
-        if (entitiesWithEmployees.length > 0) {
-            const totalEmployees = entitiesWithEmployees.reduce((sum, e) => {
-                const employees = parseFloat(e.employees.toString().replace(/[,]/g, ''));
-                return sum + (isNaN(employees) ? 0 : employees);
-            }, 0);
-            
-            const employeesElement = document.getElementById('total-employees');
-            if (employeesElement && totalEmployees > 0) {
-                employeesElement.textContent = totalEmployees > 1000 ? 
-                    `${Math.round(totalEmployees/1000)}K+` : 
-                    totalEmployees.toLocaleString();
-            }
+        // Remove tooltip
+        if (this.tooltip) {
+            this.tooltip.remove();
         }
         
-        // Update jurisdictions count
-        const uniqueJurisdictions = new Set(this.entities.map(e => e.jurisdiction));
-        const jurisdictionsElement = document.getElementById('jurisdictions');
-        if (jurisdictionsElement) {
-            jurisdictionsElement.textContent = uniqueJurisdictions.size;
+        // Remove event listeners
+        if (this.boundUpdateDimensions) {
+            window.removeEventListener('resize', this.boundUpdateDimensions);
         }
+        
+        // Clear container
+        this.container.selectAll("*").remove();
     }
 }
 
 // Initialize the visualization when the page loads
+let chart;
 document.addEventListener('DOMContentLoaded', () => {
-    new SanDiegoGovChart();
+    chart = new SanDiegoGovChart();
+});
+
+// Clean up on page unload
+window.addEventListener('beforeunload', () => {
+    if (chart) {
+        chart.destroy();
+    }
 });

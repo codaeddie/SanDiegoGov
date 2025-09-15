@@ -1,0 +1,115 @@
+{
+  "project": "San Diego Government Chart",
+  "development_mode": true,
+  "auto_validation": true,
+  "hooks": {
+    "pre_commit": {
+      "enabled": true,
+      "script": ".claude/hooks/pre-commit.sh",
+      "blocking": true
+    },
+    "post_edit": {
+      "enabled": true,
+      "script": ".claude/hooks/post-edit.sh",
+      "blocking": false,
+      "file_patterns": ["*.js", "*.csv"]
+    }
+  },
+  "custom_commands": {
+    "validate-all": {
+      "description": "Run comprehensive validation",
+      "script": ".claude/commands/validate-all.sh",
+      "shortcut": "va"
+    },
+    "test-filter": {
+      "description": "Test all filter combinations",
+      "script": ".claude/commands/test-filter.sh",
+      "shortcut": "tf"
+    },
+    "fix-issue": {
+      "description": "Handle issue workflow (data/ui/perf/feature/bug/test)",
+      "script": ".claude/commands/fix-issue.sh",
+      "shortcut": "fi",
+      "args": ["issue_type"]
+    }
+  },
+  "agents": {
+    "feature_developer": {
+      "config": ".claude/agent-configs/issue-fixer.json",
+      "auto_trigger": false
+    },
+    "data_validator": {
+      "config": ".claude/agent-configs/data-validator.json",
+      "auto_trigger": true,
+      "trigger_on": ["csv_edit", "data_update"]
+    }
+  },
+  "workflow_presets": {
+    "feature_development_workflow": {
+      "description": "Complete workflow for developing new features",
+      "steps": [
+        "validate-all",
+        "create_feature_branch",
+        "implement_feature",
+        "test-filter",
+        "build",
+        "validate-all",
+        "create_pull_request"
+      ]
+    },
+    "data_update_workflow": {
+      "description": "Workflow for updating CSV data",
+      "steps": [
+        "backup_data",
+        "edit_csv",
+        "run_data_validator",
+        "test_visualization",
+        "commit_if_valid"
+      ]
+    },
+    "enhancement_workflow": {
+      "description": "Workflow for improving existing features",
+      "steps": [
+        "validate-all",
+        "backup_current_state",
+        "implement_enhancement",
+        "test-filter",
+        "performance_test",
+        "validate-all"
+      ]
+    }
+  },
+  "development_settings": {
+    "auto_backup": true,
+    "backup_on_error": true,
+    "test_after_edit": true,
+    "validate_before_build": true,
+    "src_directory": "./",
+    "build_command": "./build.sh",
+    "dev_command": "./dev.sh",
+    "test_url": "http://localhost:8012"
+  },
+  "issue_tracking": {
+    "issues_file": "ISSUES.md",
+    "current_focus": [],
+    "major_issues_resolved": true,
+    "resolution_date": "2024-09-14",
+    "auto_test_on_fix": true,
+    "verify_fix_pattern": {
+      "new_issues": "Test functionality and performance",
+      "features": "Verify feature completeness and usability",
+      "data_updates": "Validate data integrity and relationships",
+      "performance": "Monitor performance metrics and user experience"
+    }
+  },
+  "performance_monitoring": {
+    "enabled": true,
+    "metrics": {
+      "max_frame_time": 16,
+      "max_filter_time": 100,
+      "max_search_time": 50,
+      "max_memory_growth": 10
+    },
+    "alert_on_regression": true
+  }
+}
