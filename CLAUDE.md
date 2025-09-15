@@ -7,8 +7,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ### Running the Development Server
 ```bash
 # Start development server from project root
-./dev.sh
-# OR
 python3 server.py
 
 # Access the application:
